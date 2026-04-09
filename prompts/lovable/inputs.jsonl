@@ -1,0 +1,8 @@
+{"input": "Build me a habit tracker app. I want to define daily habits like 'drink water' or 'meditate', mark them complete each day, and see a streak counter. Should work on mobile."}
+{"input": "An expense splitter for groups of friends on holiday. People can add expenses, mark who paid and who owes, and the app calculates who needs to pay whom at the end."}
+{"input": "A pomodoro timer with an integrated task list. I add tasks, pick one to work on, run a 25-minute timer, take a 5-minute break. Track completed pomodoros per task."}
+{"input": "A reading list app. I save books I want to read with title, author, cover image, and tags. I can mark them as 'reading', 'finished', or 'abandoned' and add a star rating and notes."}
+{"input": "A workout logger for the gym. I create workout templates (e.g., 'Push Day' with bench press, overhead press, dips). When I work out, I log sets, reps, and weight. Show progress over time."}
+{"input": "A meal planner where I plan meals for the week and it generates a shopping list based on the ingredients. I should be able to save favourite recipes and reuse them."}
+{"input": "A simple journal app with mood tracking. Each day I write a journal entry and select my mood (1-5). Show me a calendar view with mood colours and let me search past entries."}
+{"input": "A pet care reminder app. I add my pets and the things they need (feeding times, medication, vet appointments, walks). Get reminders and mark things done."}

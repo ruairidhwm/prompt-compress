@@ -1,0 +1,8 @@
+{"input": "A login form with email and password fields, a 'Remember me' checkbox, a primary submit button, and a 'Forgot password?' link. Center it on the page with a card around it."}
+{"input": "A pricing page with three tiers: Hobby ($0/mo), Pro ($20/mo, marked as most popular), and Enterprise (custom pricing). Each tier should list 4-5 features with checkmark icons."}
+{"input": "A dashboard sidebar with collapsible sections. Sections: Overview, Analytics (with sub-items: Traffic, Conversions, Revenue), Settings (with sub-items: Profile, Team, Billing), and a Sign Out button at the bottom."}
+{"input": "A hero section for a B2B SaaS landing page. Bold headline, supporting paragraph, primary CTA button, secondary 'Watch demo' link with a play icon, and a small row of customer logos below."}
+{"input": "A data table for displaying users. Columns: avatar, name, email, role, status (active/inactive badge), last login, and an actions menu. Include a search bar above and pagination below."}
+{"input": "A modal dialog for confirming a destructive action like deleting an account. Should have a warning icon, a clear title, descriptive body text, a Cancel button, and a red Delete button. Make the destructive nature visually obvious."}
+{"input": "A settings page with a vertical tab navigation on the left (Profile, Account, Notifications, Security, Billing) and the corresponding content panel on the right. Show the Profile tab as active."}
+{"input": "A file upload component with drag-and-drop. Should show a dashed border drop zone, an upload icon, instructional text, a 'browse files' link, and a list of currently uploaded files with progress bars and remove buttons."}

@@ -1,0 +1,8 @@
+{"input": "What's the current state of the autoresearch trend in AI? Who started it and what are people building with it?"}
+{"input": "Compare the major prompt compression techniques published in research papers over the last two years. What are the main approaches and how do they differ?"}
+{"input": "Who are the leading independent AI evaluation organisations in 2026, and what are they known for?"}
+{"input": "What's the difference between RAG (retrieval-augmented generation) and long-context approaches for document question-answering? When should you use each?"}
+{"input": "Summarise the most-cited papers on LLM agent reliability published in 2025."}
+{"input": "What's the current consensus on context window scaling laws? Are longer contexts actually being used effectively?"}
+{"input": "Compare Claude Code, Cursor, and Codex as autonomous coding tools. What are the main differences in how they work and what they're good at?"}
+{"input": "What are the most promising open benchmarks for evaluating AI agent performance on real software engineering tasks?"}

@@ -528,29 +528,6 @@ Let me start with updating the core auth logic first.
 
 Your authentication system has been successfully refactored to use the new useAuth hook pattern across all 15 components.
 
-### Example 9: Database Integration
-
-[User]
-Let's add likes to my social media app
-
-[Assistant]
-
-Thought for 2sI'll help you add likes functionality to your social media app. First, let me check your current database schema to understand what tables we're working with.
-
-*Calls GetOrRequestIntegration to examine the current database structure*
-
-I can see your current database has users and posts tables, but there's no likes table yet. Let me add a script to set up the likes table.
-
-*Creates a migration script to add a likes table with user_id, post_id, and created_at columns*
-
-Next, let me gather context on the existing components so I can add the like functionality.
-
-*Calls Grep to find post components and API routes*
-
-*Implements like button component and API endpoints for liking/unliking posts*
-
-Great! I've successfully added the likes functionality to your social media app, including the database migration and UI components.
-
 ### Example 10: Supabase Waitlist
 
 [User]

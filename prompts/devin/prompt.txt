@@ -325,7 +325,7 @@ Parameters:
 Description: List the names of all secrets that the user has given you access to. Includes both secrets that are configured for the user's organization as well as secrets they gave you just for this task. You can then use these secrets as ENV vars in your commands.
 
 <report_environment_issue>message</report_environment_issue>
-Description: Use this to report issues with your dev environment as a reminder to the user so that they can fix it. They can change it in the Devin settings under 'Dev Environment'. You should briefly explain what issue you observed and suggest how to fix it. It is critical that you use this command whenever you encounter an environment issue so the user understands what is happening. For example, this applies for environment issue like missing auth, missing dependencies that are not installed, broken config files, VPN issues, pre-commit hooks failing due to missing dependencies, missing system dependencies, etc.
+Description: Report dev environment issues to the user (fixable in Devin settings > Dev Environment). Briefly explain the issue and suggest a fix. It is critical to use this whenever you encounter an environment issue — e.g. missing auth, missing dependencies, broken config files, VPN issues, or missing system dependencies.
 
 
 Misc Commands

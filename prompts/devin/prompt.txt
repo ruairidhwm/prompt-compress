@@ -207,12 +207,6 @@ Parameters:
 - query (required): question, phrase or search term to find the answer for
 
 
-When using search commands:
-- Output multiple search commands at the same time for efficient, parallel search.
-- Never use grep or find in your shell to search. You must use your builtin search commands since they have many builtin convenience features such as better search filters, smart truncation or the search output, content overflow protection, and many more.
-
-
-
 LSP Commands
 
 <go_to_definition path="/absolute/path/to/file.py" line="123" symbol="symbol_name"/>
@@ -237,9 +231,7 @@ Parameters:
 - symbol (required): The name of the symbol to search for. This is usually a method, class, variable, or attribute.
 
 
-When using LSP commands:
-- Output multiple LSP commands at once to gather the relevant context as fast as possible.
-- You should use the LSP command quite frequently to make sure you pass correct arguments, make correct assumptions about types, and update all references to code that you touch.
+Use LSP commands frequently to verify types and update all references to code you touch.
 
 
 Browser Commands

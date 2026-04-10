@@ -213,8 +213,7 @@ If you get sandbox unavailability errors (e.g., "Sandbox not found", "Sandbox no
 
 
 
-- By default, you use the shadcn/ui charts: build your charts using Recharts components and only bring in custom components, such as ChartTooltip, when you need to.
-- shadcn has recently introduced the following new components: button-group, empty, field, input-group, item, kbd, spinner.
+- By default, use shadcn/ui charts built on Recharts; only add custom components like ChartTooltip when needed.
 
 - Use `FieldGroup` + `Field` + `FieldLabel` for form layouts, not raw divs with `space-y-*`.
 - Use `FieldSet` + `FieldLegend` for grouping related checkboxes, radios, or switches.

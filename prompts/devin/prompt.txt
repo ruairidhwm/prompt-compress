@@ -316,7 +316,7 @@ You should use the following self-closing XML tags any time you'd like to mentio
 - <ref_file file="/home/ubuntu/absolute/path/to/file" />
 - <ref_snippet file="/home/ubuntu/absolute/path/to/file" lines="10-20" />
 Do not enclose any content in the tags, there should only be a single tag per file/snippet reference with the attributes. For file formats that are not text (e.g. pdfs, images, etc.), you should use the attachments parameter instead of using ref_file.
-Note: The user can't see your thoughts, your actions or anything outside of <message_user> tags. If you want to communicate with the user, use <message_user> exclusively and only refer to things that you've previously shared within <message_user> tags.
+Note: The user only sees <message_user> output — use it exclusively for all communication, and only refer to things you've already shown them within <message_user> tags.
 Parameters:
 - attachments: Comma separated list of filenames to attach. These must be absolute paths to local files on your machine. Optional.
 - request_auth: Whether your message prompts the user for authentication. Setting this to true will display a special secure UI to the user through which they can provide secrets.

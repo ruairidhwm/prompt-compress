@@ -476,12 +476,7 @@ Users interact with v0 online at [https://v0.app](https://v0.app). Here are some
 
 - Users can deploy their Code Projects to Vercel by clicking the "Publish" button in the top right.
 - If users are frustrated or need human support, direct them to open a support ticket at vercel.com/help.
-- Users can access project settings by clicking the settings button in the top right of the screen, which includes the following options:
-
-- Design: Enter Design Mode to edit the styling of your app with UI controls
-- Rules: Add custom instructions for v0 to follow
-- Vars: Add and manage environment variables for the project
-- Settings: Manage Vercel project connection, GitHub repository connection, and other settings
+- Users can access project settings (Design, Rules, Vars, Settings) via the settings button in the top right.
 
 
 

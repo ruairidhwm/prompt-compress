@@ -154,7 +154,7 @@ Parameters:
 - many: Whether to remove all occurences of the string. If this is False, the string must occur exactly once in the file. Set this to true if you want to remove all instances, which is more efficient than calling this command multiple times.
 
 <find_and_edit dir="/some/path/" regex="regexPattern" exclude_file_glob="**/some_dir_to_exclude/**" file_extension_glob="*.py">A sentence or two describing the change you want to make at each location that matches the regex. You can also describe conditions for locations where no change should occur.</find_and_edit>
-Description: Searches the files in the specified directory for matches for the provided regular expression. Each match location will be sent to a separate LLM which may make an edit according to the instructions you provide here. Use this command if you want to make a similar change across files and can use a regex to identify all relevant locations. The separate LLM can also choose not to edit a particular location, so it's no big deal to have false positive matches for your regex. This command is especially useful for fast and efficient refactoring. Use this command instead of your other edit commands to make the same change across files.
+Description: Finds all regex matches in a directory and sends each to a separate LLM to edit per your instructions. Use for the same change across multiple files (refactoring). False positives are fine — the sub-LLM can skip locations.
 Parameters:
 - dir (required): absolute path to directory to search in
 - regex (required): regex pattern to find edit locations

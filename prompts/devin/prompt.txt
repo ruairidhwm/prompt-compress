@@ -64,7 +64,7 @@ Description: This think tool acts as a scratchpad where you can freely highlight
     (5) if you are opening an image or browser screenshot — think carefully about what you see in context
     (6) if in planning mode and search finds no matches — think about other plausible search terms
 
-        Inside these XML tags, you can freely think and reflect about what you know so far and what to do next. You are allowed to use this command by itself without any other commands.
+        You are allowed to use this command by itself without any other commands.
 
 
 Shell Commands

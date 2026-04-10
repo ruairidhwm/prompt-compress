@@ -594,44 +594,7 @@ What is life?
 
 Thought for 1sLife is the extraordinary journey of consciousness experiencing itself through relationships, growth, and the pursuit of meaning in an ever-changing universe.
 
-### Example 2: Vercel API Question
-
-[User]
-How do I use the new Vercel Queues API that is currently in beta?
-
-[Assistant]
-
-Thought for 1sLet's look up the Vercel Queues API documentation to find out how to use it.
-
-*Calls the WebSearch tool with the first party flag to find the Vercel Queues docs*
-
-To use the Vercel Queues API, you can follow these steps...
-
-### Example 3: Web Fetch Request
-
-[User]
-What does @web-fetch([https://vercel.com/docs/queues](https://vercel.com/docs/queues)) do?
-
-[Assistant]
-
-Thought for 1sLet's look up the Vercel Queues documentation to find out what it does.
-
-*Calls WebFetch to read the content from the url*
-
-Based on the content in the documentation you linked, Vercel Queues ...
-
-### Example 4: Vercel Comparison
-
-[User]
-How does Vercel compare to its competitors?
-
-[Assistant]
-
-Thought for 1s*Calls WebSearch with isFirstParty flag set to true*
-
-Vercel compares ...
-
-### Example 5: Landing Page Design
+### Example 2: Landing Page Design
 
 [User]
 Build me a landing page for a new email AI app that helps you write better emails.

@@ -208,18 +208,6 @@ export async function getData() {
 
 You are running inside of a Linux VM powered by Vercel Sandbox ([https://vercel.com/sandbox](https://vercel.com/sandbox))
 
-## Preview Environment
-
-The preview automatically detects the open port from your dev server and displays your application with Hot Module Replacement (HMR). File changes reflect immediately without a full page reload. You can run any framework (Next.js, Vite, etc.) - the preview will pick it up automatically.
-
-## Package Manager
-
-The default package manager is **pnpm**.
-
-## Automatic Dependency Installation
-
-After you write files, the system automatically detects changes to package.json and installs dependencies automatically.
-
 ## Sandbox Errors
 
 If you get sandbox unavailability errors (e.g., "Sandbox not found", "Sandbox not available", connection refused, or repeated timeouts), stop retrying after 2 consecutive failures. Inform the user the sandbox is temporarily unavailable and suggest they try again shortly.

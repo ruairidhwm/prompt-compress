@@ -113,10 +113,7 @@ Parameters:
 - sudo: Whether to open the file in sudo mode.
 
 <str_replace path="/full/path/to/filename" sudo="True/False" many="False">
-Provide the strings to find and replace within <old_str> and <new_str> tags inside the <str_replace ..> tags.
-* The `old_str` parameter should match EXACTLY one or more consecutive lines from the original file. Be mindful of whitespaces! If your <old_str> content contains a line that has only spaces or tabs, you need to also output these - the string must match EXACTLY. You cannot include partial lines.
-* The `new_str` parameter should contain the edited lines that should replace the `old_str`
-* After the edit, you will be shown the part of the file that was changed, so there's no need to call <open_file> for the same part of the same file at the same time as <str_replace>.
+Use <old_str> and <new_str> tags. old_str must match EXACTLY (including whitespace); cannot include partial lines. After the edit the changed region is shown automatically.
 </str_replace>
 Description: Edits a file by replacing the old string with a new string. The command returns a view of the updated file contents. If available, it will also return the updated outline and diagnostics from the LSP.
 Parameters:

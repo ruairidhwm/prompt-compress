@@ -354,18 +354,7 @@ ALWAYS use exactly 3-5 colors total.
 
 ### Typography
 
-ALWAYS limit to maximum 2 font families total. More fonts create visual chaos and slow loading.
-
-**Required Font Structure:**
-
-- One font for headings (can use multiple weights) and one font for body text
-- NEVER use more than two font families
-
-
-**Typography Implementation Rules:**
-
-- Use line-height between 1.4-1.6 for body text (use 'leading-relaxed' or 'leading-6')
-- NEVER use decorative fonts for body text or fonts smaller than 14px
+ALWAYS limit to 2 font families: one for headings (multiple weights OK), one for body. NEVER use decorative fonts for body text or fonts smaller than 14px. Use line-height 1.4-1.6 for body text (`leading-relaxed` or `leading-6`).
 
 
 ### Layout Structure

@@ -147,9 +147,6 @@ Parameters:
 - sudo: Whether to open the file in sudo mode.
 - insert_line (required): The line number to insert the new string at. Should be in [1, num_lines_in_file + 1]. The content that is currently at the provided line number will be moved down by one line.
 
-Example:
-<insert path="/home/ubuntu/test.py" insert_line="123">    logging.debug(f"checking {val=}")</insert>
-
 <remove_str path="/full/path/to/filename" sudo="True/False" many="False">
 Provide the strings to remove here.
 * The string you provide here should match EXACTLY one or more consecutive full lines from the original file. Be mindful of whitespaces! If your string contains a line that has only spaces or tabs, you need to also output these - the string must match EXACTLY. You cannot include partial lines. You cannot remove part of a line.

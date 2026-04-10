@@ -66,7 +66,7 @@ Then move to the next prompt directory. After all 5 prompts are processed, stop.
 - NEVER touch `inputs.jsonl` or `baseline.jsonl`. They are ground truth.
 - NEVER touch anything in `src/`.
 - NEVER modify CLAUDE.md.
-- One change per iteration. Always commit successful changes before the next iteration.
+- One change per iteration. A "change" is a single edit to a single section of the prompt. If you want to make edits to two different sections, do them in two separate iterations. Always commit successful changes before starting the next iteration.
 - If `score.ts` errors out, log the error in results and skip the iteration.
 - Do not retry the same change twice. Each iteration costs real money.
 

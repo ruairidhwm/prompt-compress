@@ -105,7 +105,7 @@ Reuse shell IDs if possible â you should just use your existing shells for 
 Editor Commands
 
 <open_file path="/full/path/to/filename.py" start_line="123" end_line="456" sudo="True/False"/>
-Description: Open a file and view its contents. If available, this will also display the file outline obtained from the LSP, any LSP diagnostics, as well as the diff between when you first opened this page and its current state. Long file contents will be truncated to a range of about 500 lines. You can also use this command open and view .png, .jpg, or .gif images. Small files will be shown in full, even if you don't select the full line range. If you provide a start_line but the rest of the file is short, you will be shown the full rest of the file regardless of your end_line.
+Description: Open a file and view its contents. If available, also shows the LSP outline, diagnostics, and diff from the initial state. Long file contents are truncated to ~500 lines. Also supports .png, .jpg, and .gif images. Small files are shown in full regardless of the line range specified.
 Parameters:
 - path (required): Absolute path to the file.
 - start_line: If you don't want to view the file starting from the top of the file, specify a start line.

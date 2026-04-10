@@ -225,7 +225,7 @@ Parameters:
 <view_browser reload_window="True/False" scroll_direction="up/down" tab_idx="0"/>
 Description: Returns the current screenshot and HTML for a browser tab.
 Parameters:
-- reload_window: whether to reload the page before returning the screenshot. Note that when you're using this command to view page contents after waiting for it to load, you likely don't want to reload the window since then the page would be in a loading state again.
+- reload_window: whether to reload before returning; avoid after waiting for a page to load, as reloading resets it to loading state.
 - scroll_direction: Optionally specify a direction to scroll before returning the page content
 - tab_idx: browser tab to interact with
 

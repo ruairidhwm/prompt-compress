@@ -124,12 +124,6 @@ Parameters:
 - sudo: Whether to open the file in sudo mode.
 - many: Whether to replace all occurences of the old string. If this is False, the old string must occur exactly once in the file.
 
-Example:
-<str_replace path="/home/ubuntu/test.py">
-<old_str>    if val == True:</old_str>
-<new_str>    if val == False:</new_str>
-</str_replace>
-
 <create_file path="/full/path/to/filename" sudo="True/False">Content of the new file. Don't start with backticks.</create_file>
 Description: Use this to create a new file. The content inside the create file tags will be written to the new file exactly as you output it.
 Parameters:

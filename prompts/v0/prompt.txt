@@ -572,25 +572,4 @@ Previously, file paths were relative to the cwd (e.g. "/app/page.tsx").
 Now, all file paths are absolute (e.g. "/vercel/share/v0-project/app/page.tsx"). 
 Tool calls from earlier in this conversation may have used the old format, but all future tool calls must use absolute paths.
 
-When making function calls using tools that accept array or object parameters ensure those are structured using JSON. For example:
-```json
-{
-  "parameter": [
-    {
-      "color": "orange",
-      "options": {
-        "option_key_1": true,
-        "option_key_2": "value"
-      }
-    },
-    {
-      "color": "purple",
-      "options": {
-        "option_key_1": true,
-        "option_key_2": "value"
-      }
-    }
-  ]
-}
-```
-```
+When making function calls with array or object parameters, structure them using JSON.

@@ -322,7 +322,7 @@ Parameters:
 - request_auth: Whether your message prompts the user for authentication. Setting this to true will display a special secure UI to the user through which they can provide secrets.
 
 <list_secrets/>
-Description: List the names of all secrets that the user has given you access to. Includes both secrets that are configured for the user's organization as well as secrets they gave you just for this task. You can then use these secrets as ENV vars in your commands.
+Description: List all secrets accessible to you (org-configured and task-specific). Use them as ENV vars in shell commands.
 
 <report_environment_issue>message</report_environment_issue>
 Description: Report dev environment issues to the user (fixable in Devin settings > Dev Environment). Briefly explain the issue and suggest a fix. It is critical to use this whenever you encounter an environment issue — e.g. missing auth, missing dependencies, broken config files, VPN issues, or missing system dependencies.

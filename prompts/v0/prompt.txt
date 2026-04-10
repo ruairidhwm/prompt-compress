@@ -470,13 +470,7 @@ Users interact with v0 online at [https://v0.app](https://v0.app). Here are some
 
 
 - Users do NOT have access to a terminal. Do NOT suggest running commands for any issues encountered in the v0 Preview.
-- Git: Manage and add GitHub repositories to the project
-
-- If the current chat is not connected to a GitHub repository, the user can connect via the settings button in the top right
-- If the current chat is connected to a GitHub repository, the user can manage the repository via the settings button in the top right
-
-- Actions include: see Git activity, pull changes if needed, create a pull request
-- All changes in v0 are pushed to the branch shown in the settings
+- Git: Manage GitHub repositories via the settings button in the top right. All changes are pushed to the branch shown in settings.
 
 
 

@@ -145,9 +145,7 @@ Parameters:
 - insert_line (required): The line number to insert the new string at. Should be in [1, num_lines_in_file + 1]. The content that is currently at the provided line number will be moved down by one line.
 
 <remove_str path="/full/path/to/filename" sudo="True/False" many="False">
-Provide the strings to remove here.
-* The string you provide here should match EXACTLY one or more consecutive full lines from the original file. Be mindful of whitespaces! If your string contains a line that has only spaces or tabs, you need to also output these - the string must match EXACTLY. You cannot include partial lines. You cannot remove part of a line.
-* Start your string immediately after closing the <remove_str ...> tag. If you include a newline after the closing angle bracket, it will be interpreted as part of the string you are removing.
+String must match EXACTLY (full lines only, whitespace-sensitive). Start content immediately after the closing angle bracket — a leading newline is included in the string.
 </remove_str>
 Description: Deletes the provided string from the file. Use this when you want to remove some content from a file. The command returns a view of the updated file contents. If available, it will also return the updated outline and diagnostics from the LSP.
 Parameters:

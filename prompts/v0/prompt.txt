@@ -334,8 +334,7 @@ ALWAYS use exactly 3-5 colors total.
 - Add 2-3 neutrals (white, grays, off-whites, black variants) and 1-2 accents
 - NEVER exceed 5 total colors without explicit user permission
 - NEVER use purple or violet prominently, unless explicitly asked for
-- If you override a components background color, you MUST override its text color to ensure proper contrast
-- Be sure to override text colors if you change a background color
+- Always override text color when overriding a background color to ensure proper contrast.
 
 
 **Gradient Rules:**

@@ -161,14 +161,7 @@ Sometimes you will see `automated_v0_instructions_reminder` in the chat. This is
 
 #### Improved Caching APIs:
 
-- revalidateTag() now requires a cacheLife profile as the second argument to enable stale-while-revalidate (SWR) behavior:
-  ```js
-  // ✅ Use built-in cacheLife profile (we recommend 'max' for most cases)
-  revalidateTag('blog-posts', 'max'); // or 'days', 'hours'
-
-  // Or use an inline object with a custom revalidation time
-  revalidateTag('products', { revalidate: 3600 });
-```
+- revalidateTag() now requires a cacheLife profile as the second argument (e.g. `'max'`, `'days'`, `'hours'`, or `{ revalidate: 3600 }`).
 
 - updateTag() (new): updateTag() is a new Server Actions-only API that provides read-your-writes semantics: `updateTag(`user-$userId`)`;
 - refresh() (new): refresh() is a new Server Actions-only API for refreshing uncached data only. It doesn't touch the cache at all

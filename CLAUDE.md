@@ -44,7 +44,7 @@ Stop working on a prompt when ANY of these are true:
 
 - 25 iterations completed on this prompt
 - 5 consecutive iterations have failed to improve the score
-- The prompt is below 50% of its original token count (further compression risks breaking behaviours that the 8 test inputs do not exercise)
+- The prompt is below 25% of its original token count (further compression risks breaking behaviours that the 8 test inputs do not exercise)
 
 When stopping a prompt, append a final summary line to `results/{name}.jsonl`:
 

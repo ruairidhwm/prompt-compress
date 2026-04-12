@@ -1,0 +1,19 @@
+◇ injected env (1) from .env // tip: ⌘ enable debugging { debug: true }
+{
+  "directory": "prompts/v0",
+  "prompt_tokens": 9068,
+  "n_inputs": 8,
+  "avg_self_similarity": 0.9656,
+  "min_self_similarity": 0.9174,
+  "max_self_similarity": 0.9999,
+  "per_input_self_similarity": [
+    0.9701,
+    0.9982,
+    0.9573,
+    0.9753,
+    0.9999,
+    0.9422,
+    0.9174,
+    0.9642
+  ]
+}

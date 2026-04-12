@@ -1,0 +1,19 @@
+◇ injected env (1) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+{
+  "directory": "prompts/perplexity",
+  "prompt_tokens": 2394,
+  "n_inputs": 8,
+  "avg_self_similarity": 0.9814,
+  "min_self_similarity": 0.9534,
+  "max_self_similarity": 1,
+  "per_input_self_similarity": [
+    0.9946,
+    0.9534,
+    0.9843,
+    0.986,
+    1,
+    0.9775,
+    0.9759,
+    0.9798
+  ]
+}

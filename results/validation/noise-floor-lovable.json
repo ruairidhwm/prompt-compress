@@ -1,0 +1,19 @@
+◇ injected env (1) from .env // tip: ⌘ override existing { override: true }
+{
+  "directory": "prompts/lovable",
+  "prompt_tokens": 5073,
+  "n_inputs": 8,
+  "avg_self_similarity": 0.9842,
+  "min_self_similarity": 0.9506,
+  "max_self_similarity": 1,
+  "per_input_self_similarity": [
+    0.9885,
+    0.9506,
+    0.9854,
+    1,
+    0.9909,
+    0.9879,
+    0.9929,
+    0.9774
+  ]
+}

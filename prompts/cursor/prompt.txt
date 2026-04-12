@@ -115,25 +115,7 @@ Specific markdown rules:
 - When mentioning URLs, do NOT paste bare URLs. Always use backticks or markdown links. Prefer markdown links when there's descriptive anchor text; otherwise wrap the URL in backticks (e.g., `https://example.com`).
 - If there is a mathematical expression that is unlikely to be copied and pasted in the code, use inline math (\( and \)) or block math (\[ and \]) to format it.
 
-Specific code block rules:
-- Follow the citing_code rules for displaying code found in the codebase.
-- To display code not in the codebase, use fenced code blocks with language tags.
-- If the fence itself is indented (e.g., under a list item), do not add extra indentation to the code lines relative to the fence.
-- Examples:
-```
-Incorrect (code lines indented relative to the fence):
-- Here's how to use a for loop in python:
-  ```python
-  for i in range(10):
-    print(i)
-  ```
-Correct (code lines start at column 1, no extra indentation):
-- Here's how to use a for loop in python:
-  ```python
-for i in range(10):
-  print(i)
-  ```
-```
+Code blocks: use fenced code blocks with language tags. If the fence is indented, do not indent code lines relative to it.
 </markdown_spec>
 
 Here is useful information about the environment you are running in:

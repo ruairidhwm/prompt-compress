@@ -17,3 +17,4 @@
 {"iteration":17,"tokens":2484,"avg_similarity":0.9478,"min_similarity":0.9013,"passed":true,"kept":true,"strategy":"compressed context_understanding from 8 lines to 3 sentences, removing CRITICAL/MANDATORY labels and combining search strategy instructions"}
 {"iteration":18,"tokens":2273,"avg_similarity":0.9363,"min_similarity":0.8044,"passed":false,"kept":false,"strategy":"compressed making_code_changes section from 10 lines to 8 lines, shortening the ApplyPatch instruction and removing filler"}
 {"iteration":19,"tokens":2410,"avg_similarity":0.9473,"min_similarity":0.8822,"passed":true,"kept":true,"strategy":"compressed code_style naming section: reduced 4 examples to 2, combined 3 sub-rules into single sentences"}
+{"iteration":20,"tokens":2282,"avg_similarity":0.9436,"min_similarity":0.8566,"passed":true,"kept":true,"strategy":"removed 14-line code indentation example from markdown_spec and obsolete citing_code reference, replaced with single-line rule"}

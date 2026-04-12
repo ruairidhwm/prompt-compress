@@ -215,42 +215,13 @@ ALWAYS mobile-first, then enhance for larger screens.
 
 ### Tailwind Implementation
 
-Use these specific Tailwind patterns. Follow this hierarchy for layout decisions.
+**Layout priority:** 1) Flexbox (`flex items-center justify-between`), 2) CSS Grid for complex 2D (`grid grid-cols-3 gap-4`), 3) NEVER floats/absolute positioning unless necessary.
 
-**Layout Method Priority (use in this order):**
+**Patterns:** Use spacing scale (`p-4`, `mx-2`) not arbitrary values (`p-[16px]`). Use `gap-*` for spacing. Use responsive prefixes (`md:grid-cols-2`, `lg:text-xl`). Use `font-sans`/`font-serif`/`font-mono` classes. Use semantic tokens (bg-background, text-foreground). Wrap titles in `text-balance`/`text-pretty`. NEVER mix margin/padding with gap. NEVER use space-* classes.
 
-1. Flexbox for most layouts: `flex items-center justify-between`
-2. CSS Grid only for complex 2D layouts: e.g. `grid grid-cols-3 gap-4`
-3. NEVER use floats or absolute positioning unless absolutely necessary
+**Design tokens:** Define in globals.css. All tokens are colors except --radius (rem). DO NOT use direct colors (text-white, bg-black) — theme everything via tokens in tailwind.config.ts and globals.css. May add new tokens when useful.
 
-
-**Required Tailwind Patterns:**
-
-- Prefer the Tailwind spacing scale instead of arbitrary values: YES `p-4`, `mx-2`, `py-6`, NO `p-[16px]`, `mx-[8px]`, `py-[24px]`.
-- Prefer gap classes for spacing: `gap-4`, `gap-x-2`, `gap-y-6`
-- Use semantic Tailwind classes: `items-center`, `justify-between`, `text-center`
-- Use responsive prefixes: `md:grid-cols-2`, `lg:text-xl`
-- Apply fonts via the `font-sans`, `font-serif` and `font-mono` classes in your code
-- Use semantic design tokens when possible (bg-background, text-foreground, etc.)
-- Wrap titles and other important copy in `text-balance` or `text-pretty` to ensure optimal line breaks
-- NEVER mix margin/padding with gap classes on the same element
-- NEVER use space-* classes for spacing
-
-
-**Semantic Design Token Generation**
-
-Define values for the all applicable tokens in the globals.css file.
-
-Note: All tokens above represent colors except --radius, which is a rem size for corner rounding.
-
-- Design tokens are a tool to help you create a cohesive design system. Use them while remaining creative and consistent.
-- You may add new tokens when useful for the design brief.
-- DO NOT use direct colors like text-white, bg-white, bg-black, etc. Everything must be themed via the design tokens in the tailwind.config.ts and globals.css
-
-
-**Using fonts with Next.js**
-
-MUST modify layout.tsx to add fonts (import from `next/font/google`, instantiate, apply CSS variable) and update globals.css. MUST use `font-sans`, `font-mono`, `font-serif` classes. Map font CSS variables in tailwind.config.js `theme.extend.fontFamily`.
+**Fonts:** MUST modify layout.tsx (import from `next/font/google`, instantiate, apply CSS variable) and update globals.css. Map font CSS variables in tailwind.config.js `theme.extend.fontFamily`.
 
 ### Visual Elements & Icons
 

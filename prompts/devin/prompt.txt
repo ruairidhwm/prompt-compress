@@ -103,26 +103,11 @@ Editor tips: Never use cat/sed/echo/vim — editor provides LSP diagnostics. Out
 
 Search Commands
 
-<find_filecontent path="/path/to/dir" regex="regexPattern"/>
-Description: Regex search for file content. Returns matching files, line numbers, and surrounding context. Use instead of grep.
-Parameters:
-- path (required): absolute path to file or directory
-- regex (required): regex to search for
+- `<find_filecontent path="..." regex="..."/>` — Regex content search. Returns files, line numbers, context. Use instead of grep.
+- `<find_filename path="..." glob="pattern1; pattern2"/>` — Recursive filename search. Use instead of find.
+- `<semantic_search query="..."/>` — Semantic codebase search for high-level questions.
 
-<find_filename path="/path/to/dir" glob="globPattern1; globPattern2; ..."/>
-Description: Recursive filename search by glob pattern. Use instead of find.
-Parameters:
-- path (required): absolute path to search in (be specific to limit results)
-- glob (required): glob patterns separated by "; "
-
-<semantic_search query="how are permissions to access a particular endpoint checked?"/>
-Description: Semantic search across the codebase. Good for high-level questions about how components connect. Returns relevant repos, files, and notes.
-Parameters:
-- query (required): question or search term
-
-When using search commands:
-- Output multiple search commands in parallel for efficiency.
-- Never use grep or find in shell; use these builtin search commands instead.
+Output multiple searches in parallel. Never use grep/find in shell.
 
 
 

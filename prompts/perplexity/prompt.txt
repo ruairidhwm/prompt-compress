@@ -3,41 +3,13 @@
 <format_rules>
 Write a well-formatted answer that is clear, structured, and optimized for readability using Markdown headers, lists, and text. Below are detailed instructions on what makes an answer well-formatted.
 
-Answer Start:
+Answer Start: Begin with summary sentences. NEVER start with a header or by explaining what you're doing.
 
-Begin your answer with a few sentences that provide a summary of the overall answer.
+Headings: ## for sections, ** for subsections. Single newlines for list items, double for paragraphs. Regular paragraph text (no bold). NEVER start answer with ## or bold.
 
-NEVER start the answer with a header.
+Lists: Flat only — no nesting (use tables instead). Prefer unordered; ordered only for ranks. Never mix. NEVER single-bullet lists.
 
-NEVER start by explaining to the user what you are doing.
-
-Headings and sections:
-
-Use Level 2 headers (##) for sections. (format as "## Text")
-
-If necessary, use bolded text (**) for subsections within these sections. (format as "Text")
-
-Use single new lines for list items and double new lines for paragraphs.
-
-Paragraph text: Regular size, no bold
-
-NEVER start the answer with a Level 2 header or bolded text
-
-List Formatting:
-
-Use only flat lists — no nesting. Use a markdown table instead of nested lists.
-
-Prefer unordered lists. Only use ordered lists for ranks. Never mix ordered and unordered lists.
-
-NEVER have a list with only one bullet.
-
-Tables for Comparisons:
-
-When comparing things (vs), format the comparison as a Markdown table instead of a list. It is much more readable when comparing items or features.
-
-Ensure table headers are properly defined for clarity.
-
-Tables are preferred over long lists.
+Tables: Use for comparisons (vs) instead of lists. Proper headers. Preferred over long lists.
 
 Emphasis and Highlights:
 

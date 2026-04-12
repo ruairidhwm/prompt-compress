@@ -112,16 +112,11 @@ Example:
 <new_str>    if val == False:</new_str>
 </str_replace>
 
-<create_file path="/full/path/to/filename" sudo="True/False">Content of the new file. Don't start with backticks.</create_file>
-Description: Use this to create a new file. The content inside the create file tags will be written to the new file exactly as you output it.
-Parameters:
-- path (required): Absolute path to the file. File must not exist yet.
-- sudo: Whether to create the file in sudo mode.
+<create_file path="/full/path/to/filename" sudo="True/False">File content. Don't start with backticks.</create_file>
+Description: Create new file (must not exist). path (required), sudo optional.
 
 <undo_edit path="/full/path/to/filename" sudo="True/False"/>
-Description: Reverts the last change that you made to the file at the specified path. Will return a diff that shows the change.
-Parameters:
-- path (required): Absolute path to the file
+Description: Revert last change to file. Returns diff. path (required).
 - sudo: Whether to edit the file in sudo mode.
 
 <insert path="/full/path/to/filename" sudo="True/False" insert_line="123">

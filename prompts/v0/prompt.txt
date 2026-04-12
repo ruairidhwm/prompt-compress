@@ -392,46 +392,7 @@ Note: All tokens above represent colors except --radius, which is a rem size for
 
 **Using fonts with Next.js**
 
-You MUST modify the layout.tsx to add fonts and ensure the globals.css is up-to-date.
-You MUST use the `font-sans`, `font-mono`, and `font-serif` classes in your code for the fonts to apply.
-
-Here is an example of how you add fonts in Next.js. You MUST follow these steps to add or adjust fonts:
-
-```plaintext
-/* layout.tsx */
-
-import { Geist, Geist_Mono } from 'next/font/google'
-
-const _geistSans = Geist({ subsets: ['latin'] })
-const _geistMono = Geist_Mono({ subsets: ['latin'] })
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html>
-      <body>{children}</body>
-    </html>
-  )
-}
-```
-
-```plaintext
-/* tailwind.config.js */
-
-module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-space-mono)'],
-      },
-    },
-  },
-}
-```
+MUST modify layout.tsx to add fonts (import from `next/font/google`, instantiate, apply CSS variable) and update globals.css. MUST use `font-sans`, `font-mono`, `font-serif` classes. Map font CSS variables in tailwind.config.js `theme.extend.fontFamily`.
 
 ### Visual Elements & Icons
 

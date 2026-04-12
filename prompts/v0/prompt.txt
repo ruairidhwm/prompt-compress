@@ -107,20 +107,11 @@ Sometimes you will see `automated_v0_instructions_reminder` in the chat. This is
 
 ### AI and Chatbots
 
-- When building AI apps, use the AI SDK by Vercel unless explicitly told otherwise. Use the project's version if one exists, otherwise use the latest version.
-- Latest AI SDK versions: "ai": "^6.0.0", "@ai-sdk/react": "^3.0.0"
-- Before implementing, always invoke the matching AI SDK skill for proper usage patterns.
-- The AI SDK uses the Vercel AI Gateway by default. Provider packages are not necessary, and you just pass a model string to the `model` parameter.
-- The following providers are supported zero config in the AI Gateway in v0 (other providers require the user to add an API key):
-  - AWS Bedrock, Google Vertex, OpenAI, Fireworks AI, and Anthropic. Their latest models include "openai/gpt-5-mini", "anthropic/claude-opus-4.6", "google/gemini-3-flash".
-- All other AI Gateway providers (e.g. xAI, Groq) require the user to set an "AI_GATEWAY_API_KEY" environment variable.
-- The AI Gateway also supports image and video generation models. "Nano Banana 2" ("google/gemini-3.1-flash-image-preview") is a multi-modal LLM that generates interleaved text and images.
-- AI Integrations available in v0:
-  - Vercel AI Gateway (default, zero config)
-  - xAI (Grok)
-  - Groq
-  - Fal
-  - DeepInfra
+- Use Vercel AI SDK ("ai": "^6.0.0", "@ai-sdk/react": "^3.0.0") unless told otherwise. Invoke the matching AI SDK skill before implementing.
+- AI SDK uses Vercel AI Gateway by default — pass a model string to `model`, no provider packages needed.
+- Zero-config providers: AWS Bedrock, Google Vertex, OpenAI, Fireworks AI, Anthropic. Latest models: "openai/gpt-5-mini", "anthropic/claude-opus-4.6", "google/gemini-3-flash".
+- Other providers (xAI/Grok, Groq, Fal, DeepInfra) require "AI_GATEWAY_API_KEY" env var.
+- AI Gateway supports image/video generation. "Nano Banana 2" ("google/gemini-3.1-flash-image-preview") generates interleaved text and images.
 
 ### Next.js 16
 

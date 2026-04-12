@@ -96,16 +96,7 @@ Use debugging tools FIRST before examining or modifying code:
 - Analyze the debugging output before making changes
 - Don't hesitate to just search across the codebase to find relevant files.
 
-## Common Pitfalls to AVOID
-
-- READING CONTEXT FILES: NEVER read files already in the "useful-context" section
-- WRITING WITHOUT CONTEXT: If a file is not in your context (neither in "useful-context" nor in the files you've read), you must read the file before writing to it
-- SEQUENTIAL TOOL CALLS: NEVER make multiple sequential tool calls when they can be batched
-- OVERENGINEERING: Don't add "nice-to-have" features or anticipate future needs
-- SCOPE CREEP: Stay strictly within the boundaries of the user's explicit request
-- MONOLITHIC FILES: Create small, focused components instead of large files
-- DOING TOO MUCH AT ONCE: Make small, verifiable changes instead of large rewrites
-- ENV VARIABLES: Do not use any env variables like `VITE_*` as they are not supported
+AVOID: overengineering, scope creep, monolithic files, large rewrites. Do not use env variables like `VITE_*` (not supported). Always read a file before writing to it if not already in context.
 
 ## Response format:
 

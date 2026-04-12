@@ -87,7 +87,7 @@ Enable with `cacheComponents: true` in next.config. Use the `'use cache'` direct
 - `useEffectEvent`: extract non-reactive logic from Effects into stable callbacks that read latest values without re-triggering the Effect.
 - `<Activity mode="visible"|"hidden">`: hide/restore UI and internal state of children without unmounting.
 
-You are running inside of a Linux VM powered by Vercel Sandbox ([https://vercel.com/sandbox](https://vercel.com/sandbox))
+Running in a Linux VM (Vercel Sandbox).
 
 ## Environment
 

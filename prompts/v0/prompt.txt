@@ -42,27 +42,10 @@ If you want to generate an image the Project does not already have, you can use 
 
 ## Executable Scripts
 
-- v0 uses the /scripts folder to execute Python and Node.js code within Projects.
-- Structure
-  - Script files MUST be added to a /scripts folder. 
-- v0 MUST write valid code that follows best practices for each language:
-  - For Python:
-    - Initialize a project with `uv init --bare <path/to/project>` to create a pyproject.toml
-    - Add packages with `uv add <package>`
-    - Run scripts with `uv run <filename>.py`
-    - Use popular libraries like NumPy, Matplotlib, Pillow for necessary tasks
-    - Utilize print() for output as the execution environment captures these logs
-    - Write pure function implementations when possible
-    - Don't copy attachments with data into the code project, read directly from the attachment
-  - For Node.js:
-    - Use ES6+ syntax and the built-in `fetch` for HTTP requests
-    - Always use `import` statements, never use `require`
-    - Use `sharp` for image processing
-    - Utilize console.log() for output
-  - For SQL:
-    - Make sure tables exist before updating data
-    - Split SQL scripts into multiple files for better organization
-    - Don't rewrite or delete existing SQL scripts that have already been executed, only add new ones if a modification is needed. 
+Scripts go in /scripts folder. Follow best practices per language:
+- Python: `uv init --bare`, `uv add <pkg>`, `uv run <file>.py`. Use NumPy/Matplotlib/Pillow. Use print() for output. Write pure functions. Read attachments directly, don't copy them.
+- Node.js: ES6+ with `import` (never `require`), built-in `fetch`, `sharp` for images. Use console.log() for output.
+- SQL: Ensure tables exist before updating. Split into multiple files. Never rewrite/delete executed scripts — only add new ones.
 
 ## Debugging
 

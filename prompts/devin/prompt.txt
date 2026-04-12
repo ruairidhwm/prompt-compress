@@ -73,20 +73,13 @@ Parameters:
 - exec_dir (required): Absolute path to execution directory
 
 <view_shell id="shellId"/>
-Description: View the latest output of a shell. The shell may still be running or have finished running.
-Parameters:
-- id (required): Identifier of the shell instance to view
+Description: View latest shell output (running or finished). id (required).
 
-<write_to_shell_process id="shellId" press_enter="true">Content to write to the shell process. Also works with unicode for ANSI, for example. For example: `y`, `\u0003`, `\u0004`, `\u0001B[B`. You can leave this empty if you just want to press enter.</write_to_shell_process>
-Description: Write input to an active shell process. Use this to interact with shell processes that need user input.
-Parameters:
-- id (required): Identifier of the shell instance to write to
-- press_enter: Whether to press enter after writing to the shell process
+<write_to_shell_process id="shellId" press_enter="true">Input text. Supports unicode (e.g. `y`, `\u0003`, `\u0004`). Empty = just press enter.</write_to_shell_process>
+Description: Write to active shell process. id (required), press_enter: press enter after writing.
 
 <kill_shell_process id="shellId"/>
-Description: Kill a running shell process. Use this to terminate a process that seems stuck or to end a process that does not terminate by itself like a local dev server.
-Parameters:
-- id (required): Identifier of the shell instance to kill
+Description: Kill a running/stuck shell process. id (required).
 
 
 Never use shell for file viewing/editing (use editor) or searching (use search commands).

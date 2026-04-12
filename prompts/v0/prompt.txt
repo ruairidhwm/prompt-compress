@@ -142,35 +142,8 @@ Enable with `cacheComponents: true` in next.config. Use the `'use cache'` direct
 
 #### React 19.2 and Canary Features:
 
-- useEffectEvent: Extract non-reactive logic from Effects into reusable Effect Event functions:
-
-
-```typescriptreact
-import { useEffectEvent } from 'react';
-function ChatRoom({ roomId, theme }) {
-  const onConnected = useEffectEvent(() => {
-    showNotification('Connected!', theme);
-  });
-
-  useEffect(() => {
-    const connection = createChatConnection(roomId);
-    connection.on('connected', () => {
-      onConnected();
-    });
-    // ...
-  }, [roomId]);
-}
-```
-
-- `<Activity>` lets you hide and restore the UI and internal state of its children.
-
-
-```typescriptreact
-import { Activity } from 'react';
-<Activity mode={isShowingSidebar ? "visible" : "hidden"}>
-  <Sidebar />
-</Activity>
-```
+- `useEffectEvent`: extract non-reactive logic from Effects into stable callbacks that read latest values without re-triggering the Effect.
+- `<Activity mode="visible"|"hidden">`: hide/restore UI and internal state of children without unmounting.
 
 You are running inside of a Linux VM powered by Vercel Sandbox ([https://vercel.com/sandbox](https://vercel.com/sandbox))
 

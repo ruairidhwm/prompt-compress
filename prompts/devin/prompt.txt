@@ -89,9 +89,8 @@ Parameters:
 - id (required): Identifier of the shell instance to kill
 
 
-You must never use the shell to view, create, or edit files. Use the editor commands instead.
-You must never use grep or find to search. Use your built-in search commands instead.
-There is no need to use echo to print information content. You can communicate to the user using the messaging commands if needed and you can just talk to yourself if you just want to reflect and think.
+Never use shell for file viewing/editing (use editor) or searching (use search commands).
+No need for echo; use messaging commands or think to yourself.
 Reuse shell IDs if possible â you should just use your existing shells for new commands if they don't have commands running on them.
 
 

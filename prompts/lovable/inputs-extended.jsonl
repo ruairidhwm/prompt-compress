@@ -1,0 +1,8 @@
+{"input": "My app is showing a blank white screen after I added the new dashboard component. Can you check the console logs and network requests to figure out what's going wrong?"}
+{"input": "I want to customize the design system. Change the primary color to a deep teal (#0D9488), add a subtle gradient for card backgrounds, and create a new 'ghost' button variant using cva(). Update the HSL tokens in index.css."}
+{"input": "Hey! I'm thinking about building a project management tool. What features would you recommend for an MVP? I don't want you to build anything yet, just discuss ideas with me."}
+{"input": "Generate a hero image for a travel booking app that shows a tropical beach at sunset, and use it as the banner on the landing page."}
+{"input": "Connect my app to Supabase. I need a 'projects' table with columns for name, description, status, and user_id. Set up RLS so users can only CRUD their own projects, and wire up the frontend to fetch and display them."}
+{"input": "I need proper SEO for my landing page. Add a title tag, meta description, Open Graph tags, JSON-LD structured data for a SoftwareApplication, and make sure the page has a single H1 with semantic HTML throughout."}
+{"input": "The API call to fetch user profiles is returning a 401 error. I can see the request failing in the network tab. Can you debug this and fix the authentication header?"}
+{"input": "I just opened Lovable for the first time. Build me a personal finance dashboard where I can track income and expenses, see monthly totals, and view a pie chart of spending categories."}

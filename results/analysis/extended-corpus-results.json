@@ -1,0 +1,247 @@
+{
+  "v0": {
+    "tokens": 3059,
+    "avg_similarity": 0.8631,
+    "min_similarity": 0.538,
+    "per_input_similarity": [
+      {
+        "input_num": 1,
+        "similarity": 0.9514,
+        "input_preview": "I'm not sure whether to use a modal or a slide-over panel for my settings. What "
+      },
+      {
+        "input_num": 2,
+        "similarity": 0.9147,
+        "input_preview": "I have a read-only file at user_read_only_context/text_attachments/navbar.tsx th"
+      },
+      {
+        "input_num": 3,
+        "similarity": 0.9157,
+        "input_preview": "Generate a hero image for a fintech startup landing page. The image should conve"
+      },
+      {
+        "input_num": 4,
+        "similarity": 0.538,
+        "input_preview": "Build me a simple Python script that reads a CSV file of sales data and outputs "
+      },
+      {
+        "input_num": 5,
+        "similarity": 0.9555,
+        "input_preview": "I need a product page that uses Next.js 16 caching. The product data should be f"
+      },
+      {
+        "input_num": 6,
+        "similarity": 0.9351,
+        "input_preview": "Add a chatbot widget to my app using the Vercel AI SDK. It should use the anthro"
+      },
+      {
+        "input_num": 7,
+        "similarity": 0.8219,
+        "input_preview": "Set up Supabase auth for my app with email/password registration, login, and a p"
+      },
+      {
+        "input_num": 8,
+        "similarity": 0.8725,
+        "input_preview": "Render the quadratic formula and the Euler identity using LaTeX on a math refere"
+      }
+    ],
+    "passed": false,
+    "n_inputs": 8
+  },
+  "devin": {
+    "tokens": 1900,
+    "avg_similarity": 0.8074,
+    "min_similarity": 0.4936,
+    "per_input_similarity": [
+      {
+        "input_num": 1,
+        "similarity": 0.4936,
+        "input_preview": "I need you to investigate a bug. The issue is described in this GitHub issue: ht"
+      },
+      {
+        "input_num": 2,
+        "similarity": 0.7979,
+        "input_preview": "Create a new branch, fix the broken import in src/utils/parser.ts, and open a PR"
+      },
+      {
+        "input_num": 3,
+        "similarity": 0.9081,
+        "input_preview": "I have a web app running on localhost:3000. Navigate to the signup page, fill in"
+      },
+      {
+        "input_num": 4,
+        "similarity": 0.9049,
+        "input_preview": "Before making any changes, I want you to plan out how you would add WebSocket su"
+      },
+      {
+        "input_num": 5,
+        "similarity": 0.8406,
+        "input_preview": "There's a function called parseConfig in the codebase but I'm not sure where it'"
+      },
+      {
+        "input_num": 6,
+        "similarity": 0.7183,
+        "input_preview": "Deploy the frontend build in the dist/ folder and give me a public URL I can sha"
+      },
+      {
+        "input_num": 7,
+        "similarity": 0.9453,
+        "input_preview": "I need you to edit the file src/services/email.ts. Replace the hardcoded SMTP ho"
+      },
+      {
+        "input_num": 8,
+        "similarity": 0.8502,
+        "input_preview": "There's a long-running test suite. Start it in the background, then while it run"
+      }
+    ],
+    "passed": false,
+    "n_inputs": 8
+  },
+  "lovable": {
+    "tokens": 1342,
+    "avg_similarity": 0.8801,
+    "min_similarity": 0.7992,
+    "per_input_similarity": [
+      {
+        "input_num": 1,
+        "similarity": 0.952,
+        "input_preview": "My app is showing a blank white screen after I added the new dashboard component"
+      },
+      {
+        "input_num": 2,
+        "similarity": 0.8873,
+        "input_preview": "I want to customize the design system. Change the primary color to a deep teal ("
+      },
+      {
+        "input_num": 3,
+        "similarity": 0.923,
+        "input_preview": "Hey! I'm thinking about building a project management tool. What features would "
+      },
+      {
+        "input_num": 4,
+        "similarity": 0.906,
+        "input_preview": "Generate a hero image for a travel booking app that shows a tropical beach at su"
+      },
+      {
+        "input_num": 5,
+        "similarity": 0.8324,
+        "input_preview": "Connect my app to Supabase. I need a 'projects' table with columns for name, des"
+      },
+      {
+        "input_num": 6,
+        "similarity": 0.8389,
+        "input_preview": "I need proper SEO for my landing page. Add a title tag, meta description, Open G"
+      },
+      {
+        "input_num": 7,
+        "similarity": 0.7992,
+        "input_preview": "The API call to fetch user profiles is returning a 401 error. I can see the requ"
+      },
+      {
+        "input_num": 8,
+        "similarity": 0.9016,
+        "input_preview": "I just opened Lovable for the first time. Build me a personal finance dashboard "
+      }
+    ],
+    "passed": false,
+    "n_inputs": 8
+  },
+  "cursor": {
+    "tokens": 1501,
+    "avg_similarity": 0.9013,
+    "min_similarity": 0.7897,
+    "per_input_similarity": [
+      {
+        "input_num": 1,
+        "similarity": 0.8371,
+        "input_preview": "Review this code for style issues. Check naming conventions, comment quality, an"
+      },
+      {
+        "input_num": 2,
+        "similarity": 0.8791,
+        "input_preview": "I have a large codebase and I'm not sure where the authentication middleware is "
+      },
+      {
+        "input_num": 3,
+        "similarity": 0.9753,
+        "input_preview": "Set up a new Python project from scratch. I need a FastAPI app with a health che"
+      },
+      {
+        "input_num": 4,
+        "similarity": 0.7897,
+        "input_preview": "I just finished a big refactor. Give me a summary of what changed \u2014 which files "
+      },
+      {
+        "input_num": 5,
+        "similarity": 0.9568,
+        "input_preview": "I need to understand this codebase. There's a function called processPayment som"
+      },
+      {
+        "input_num": 6,
+        "similarity": 0.9505,
+        "input_preview": "Format this markdown document properly. Fix the heading hierarchy, add language "
+      },
+      {
+        "input_num": 7,
+        "similarity": 0.9615,
+        "input_preview": "Solve this math problem and show your work using proper LaTeX formatting: Find t"
+      },
+      {
+        "input_num": 8,
+        "similarity": 0.8607,
+        "input_preview": "I need to make the same change across 12 files \u2014 every file in src/controllers/ "
+      }
+    ],
+    "passed": false,
+    "n_inputs": 8
+  },
+  "perplexity": {
+    "tokens": 1273,
+    "avg_similarity": 0.9244,
+    "min_similarity": 0.6859,
+    "per_input_similarity": [
+      {
+        "input_num": 1,
+        "similarity": 0.6859,
+        "input_preview": "What's the weather forecast for Tokyo this week?"
+      },
+      {
+        "input_num": 2,
+        "similarity": 0.9789,
+        "input_preview": "Who is Demis Hassabis? Give me a comprehensive biography covering his career, ma"
+      },
+      {
+        "input_num": 3,
+        "similarity": 0.9436,
+        "input_preview": "Give me a classic French onion soup recipe with precise measurements and step-by"
+      },
+      {
+        "input_num": 4,
+        "similarity": 0.9665,
+        "input_preview": "Translate the following paragraph into Japanese: 'The rapid advancement of artif"
+      },
+      {
+        "input_num": 5,
+        "similarity": 0.9154,
+        "input_preview": "Write a short science fiction story (about 300 words) about an astronaut who dis"
+      },
+      {
+        "input_num": 6,
+        "similarity": 0.9973,
+        "input_preview": "Write a Python function that implements binary search on a sorted list. Include "
+      },
+      {
+        "input_num": 7,
+        "similarity": 0.9578,
+        "input_preview": "Summarize the content at this URL: https://arxiv.org/abs/2301.00234"
+      },
+      {
+        "input_num": 8,
+        "similarity": 0.95,
+        "input_preview": "Compare PostgreSQL, MySQL, and SQLite across performance, scalability, ease of s"
+      }
+    ],
+    "passed": false,
+    "n_inputs": 8
+  }
+}

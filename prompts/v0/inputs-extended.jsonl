@@ -1,0 +1,8 @@
+{"input": "I'm not sure whether to use a modal or a slide-over panel for my settings. What are the pros and cons of each for mobile users?"}
+{"input": "I have a read-only file at user_read_only_context/text_attachments/navbar.tsx that I want to use in my project. Can you copy it in and integrate it into my app layout?"}
+{"input": "Generate a hero image for a fintech startup landing page. The image should convey trust, innovation, and financial growth. Use it as the background for the hero section."}
+{"input": "Build me a simple Python script that reads a CSV file of sales data and outputs a bar chart as a PNG using Matplotlib. Put it in the /scripts directory."}
+{"input": "I need a product page that uses Next.js 16 caching. The product data should be fetched server-side with revalidateTag and the page should use the 'use cache' directive. Show me how to set up the cache profile properly."}
+{"input": "Add a chatbot widget to my app using the Vercel AI SDK. It should use the anthropic/claude-opus-4.6 model via AI Gateway, stream responses, and have a collapsible chat panel in the bottom-right corner."}
+{"input": "Set up Supabase auth for my app with email/password registration, login, and a protected dashboard route. Use RLS policies so users can only see their own data."}
+{"input": "Render the quadratic formula and the Euler identity using LaTeX on a math reference page. Also include a brief explanation of each formula below it."}

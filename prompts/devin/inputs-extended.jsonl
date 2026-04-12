@@ -1,0 +1,8 @@
+{"input": "I need you to investigate a bug. The issue is described in this GitHub issue: https://github.com/acme/widget-api/issues/47. Read the issue, look at the referenced code, and suggest a fix."}
+{"input": "Create a new branch, fix the broken import in src/utils/parser.ts, and open a PR against main with a clear description of the change."}
+{"input": "I have a web app running on localhost:3000. Navigate to the signup page, fill in the registration form with test data, submit it, and tell me if the success toast appears or if there are any console errors."}
+{"input": "Before making any changes, I want you to plan out how you would add WebSocket support to this Express app. Gather information about the existing codebase structure first, then present a plan. Don't write any code yet."}
+{"input": "There's a function called parseConfig in the codebase but I'm not sure where it's defined or what calls it. Use LSP to find its definition, all references, and its type signature, then summarize what you find."}
+{"input": "Deploy the frontend build in the dist/ folder and give me a public URL I can share with the team for review."}
+{"input": "I need you to edit the file src/services/email.ts. Replace the hardcoded SMTP host string with an environment variable. Make sure you don't commit any secrets and check that the existing tests still pass."}
+{"input": "There's a long-running test suite. Start it in the background, then while it runs, search the codebase for any TODO comments and list them for me. Check back on the test results when they finish."}

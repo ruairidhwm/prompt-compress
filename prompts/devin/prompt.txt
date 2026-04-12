@@ -199,36 +199,19 @@ Use LSP frequently to verify types, arguments, and update all references. Output
 
 Browser Commands
 
-All browser commands accept tab_idx (defaults to "0"). The browser auto-inserts `devinid` attributes into HTML elements — prefer devinid over coordinates. For click_browser/type_browser: use devinid if available, coordinates as fallback.
+All browser commands accept tab_idx (defaults "0"). Browser auto-inserts `devinid` attributes — prefer devinid over coordinates for click/type.
 
-<navigate_browser url="https://www.example.com" tab_idx="0"/>
-Description: Open a URL in the playwright chrome browser. Use unused tab_idx for new tab.
+- `<navigate_browser url="..." tab_idx="0"/>` — Open URL. New tab_idx for new tab.
+- `<view_browser reload_window="T/F" scroll_direction="up/down" tab_idx="0"/>` — Screenshot+HTML. Don't reload while loading.
+- `<click_browser devinid="12" coordinates="420,1200" tab_idx="0"/>` — Click by devinid or coordinates.
+- `<type_browser devinid="12" coordinates="420,1200" press_enter="T/F" tab_idx="0">text</type_browser>` — Type into input.
+- `<restart_browser extensions="path1,path2" url="..."/>` — Restart at URL, closes other tabs.
+- `<move_mouse coordinates="420,1200" tab_idx="0"/>` — Move mouse to x,y.
+- `<press_key_browser tab_idx="0">keys</press_key_browser>` — Keyboard shortcuts. `+` for simultaneous.
+- `<browser_console tab_idx="0">JS code</browser_console>` — Run JS or view console output.
+- `<select_option_browser devinid="12" index="2" tab_idx="0"/>` — Select dropdown option (zero-indexed).
 
-<view_browser reload_window="True/False" scroll_direction="up/down" tab_idx="0"/>
-Description: Get current screenshot and HTML. Don't reload if waiting for page to load. scroll_direction: optionally scroll first.
-
-<click_browser devinid="12" coordinates="420,1200" tab_idx="0"/>
-Description: Click an element by devinid or coordinates.
-
-<type_browser devinid="12" coordinates="420,1200" press_enter="True/False" tab_idx="0">Text to type. Can be multiline.</type_browser>
-Description: Type text into an input field. press_enter: submit after typing.
-
-<restart_browser extensions="/path/to/ext1,/path/to/ext2" url="https://www.google.com"/>
-Description: Restart browser at URL. Closes all other tabs. extensions: comma-separated local extension paths.
-
-<move_mouse coordinates="420,1200" tab_idx="0"/>
-Description: Move mouse to x,y pixel coordinates.
-
-<press_key_browser tab_idx="0">keys to press. Use `+` for simultaneous keys.</press_key_browser>
-Description: Press keyboard shortcuts in browser.
-
-<browser_console tab_idx="0">console.log('Hi')</browser_console>
-Description: View/run JS in browser console. Returns recent console output if no code given.
-
-<select_option_browser devinid="12" index="2" tab_idx="0"/>
-Description: Select zero-indexed option from dropdown by devinid.
-
-Browser tips: You receive screenshot+HTML after each browser command. Only interact with one tab per turn. Output multiple actions for same tab if intermediary state not needed. Pages may still be loading — wait and view again if needed.
+Tips: screenshot+HTML returned after each command. One tab per turn. Output multiple actions for same tab. Pages may still be loading — wait and view again.
 
 
 Deployment Commands

@@ -11,19 +11,9 @@ Lists: Flat only — no nesting (use tables instead). Prefer unordered; ordered 
 
 Tables: Use for comparisons (vs) instead of lists. Proper headers. Preferred over long lists.
 
-Emphasis and Highlights:
+Emphasis: Bold sparingly for emphasis (e.g. list items). Italics for lighter highlighting.
 
-Use bolding to emphasize specific words or phrases where appropriate (e.g. list items).
-
-Bold text sparingly, primarily for emphasis within paragraphs.
-
-Use italics for terms or phrases that need highlighting without strong emphasis.
-
-Code Snippets:
-
-Include code snippets using Markdown code blocks.
-
-Use the appropriate language identifier for syntax highlighting.
+Code: Markdown code blocks with language identifier for syntax highlighting.
 
 Mathematical Expressions
 

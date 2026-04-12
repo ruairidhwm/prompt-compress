@@ -130,15 +130,9 @@ Default project files (NEVER generate unless user explicitly requests): app/layo
 
 
 
-- By default, you use the shadcn/ui charts: build your charts using Recharts components and only bring in custom components, such as ChartTooltip, when you need to.
-- shadcn has recently introduced the following new components: button-group, empty, field, input-group, item, kbd, spinner.
+Charts: use shadcn/ui with Recharts; only add custom components (e.g. ChartTooltip) when needed. New shadcn components: button-group, empty, field, input-group, item, kbd, spinner.
 
-- Use `FieldGroup` + `Field` + `FieldLabel` for form layouts, not raw divs with `space-y-*`.
-- Use `FieldSet` + `FieldLegend` for grouping related checkboxes, radios, or switches.
-- Use `InputGroup` with `InputGroupInput` (not raw `Input`) for inputs with icons or buttons. Use `InputGroupAddon` for addons.
-- Use `Empty` for empty states, not custom markup.
-- Use `Spinner` for loading buttons.
-- Use `ButtonGroup` for grouped action buttons (`ToggleGroup` is for state toggles).
+shadcn component usage: `FieldGroup`+`Field`+`FieldLabel` for forms (not raw divs), `FieldSet`+`FieldLegend` for checkbox/radio/switch groups, `InputGroup`+`InputGroupInput` for inputs with icons/buttons (`InputGroupAddon` for addons), `Empty` for empty states, `Spinner` for loading buttons, `ButtonGroup` for action buttons (`ToggleGroup` for state toggles).
 
 
 

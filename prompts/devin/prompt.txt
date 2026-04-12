@@ -89,71 +89,16 @@ Reuse shell IDs if possible â you should just use your existing shells for 
 
 Editor Commands
 
-<open_file path="/full/path/to/filename.py" start_line="123" end_line="456" sudo="True/False"/>
-Description: Open and view a file. Shows LSP outline, diagnostics, and diff from initial state. Truncated to ~500 lines. Also works for .png/.jpg/.gif images. Small files shown in full.
-Parameters:
-- path (required): Absolute path to the file.
-- start_line: Start viewing from this line.
-- end_line: Stop viewing at this line.
-- sudo: Open in sudo mode.
+- `<open_file path="..." start_line="N" end_line="N" sudo="T/F"/>` — View file with LSP outline/diagnostics/diff. ~500 line limit. Works for images.
+- `<str_replace path="..." sudo="T/F" many="False">` — Use `<old_str>` and `<new_str>` inside. old_str must match EXACTLY (whitespace/blank lines). many=True for all occurrences.
+  Example: `<str_replace path="/home/ubuntu/test.py"><old_str>    if val == True:</old_str><new_str>    if val == False:</new_str></str_replace>`
+- `<create_file path="..." sudo="T/F">content</create_file>` — Create new file (must not exist). Don't start with backticks.
+- `<undo_edit path="..." sudo="T/F"/>` — Revert last change, returns diff.
+- `<insert path="..." sudo="T/F" insert_line="N">content</insert>` — Insert at line N. Content starts immediately after `>`. Often more efficient than str_replace.
+- `<remove_str path="..." sudo="T/F" many="False">exact lines</remove_str>` — Delete exact matching lines. No partial lines.
+- `<find_and_edit dir="..." regex="..." exclude_file_glob="..." file_extension_glob="*.py">description of change</find_and_edit>` — Regex search + LLM edit at each match. Best for cross-file refactoring.
 
-<str_replace path="/full/path/to/filename" sudo="True/False" many="False">
-Use <old_str> and <new_str> tags inside. old_str must match EXACTLY (including whitespace/blank lines). No partial lines. After edit, the changed part is shown automatically.
-</str_replace>
-Description: Replace old string with new string in a file. Returns updated content with LSP outline/diagnostics.
-Parameters:
-- path (required): Absolute path to the file
-- sudo: Sudo mode.
-- many: Replace all occurrences (default False = must occur exactly once).
-
-Example:
-<str_replace path="/home/ubuntu/test.py">
-<old_str>    if val == True:</old_str>
-<new_str>    if val == False:</new_str>
-</str_replace>
-
-<create_file path="/full/path/to/filename" sudo="True/False">File content. Don't start with backticks.</create_file>
-Description: Create new file (must not exist). path (required), sudo optional.
-
-<undo_edit path="/full/path/to/filename" sudo="True/False"/>
-Description: Revert last change to file. Returns diff. path (required).
-- sudo: Whether to edit the file in sudo mode.
-
-<insert path="/full/path/to/filename" sudo="True/False" insert_line="123">
-Content starts immediately after closing >. A newline after > is part of the inserted string. Changed part shown automatically.
-</insert>
-Description: Insert text at a line number. Often more efficient than str_replace. Returns updated content with LSP info.
-Parameters:
-- path (required): Absolute path
-- sudo: Sudo mode.
-- insert_line (required): Line number to insert at [1, num_lines+1]. Current content at that line moves down.
-
-Example:
-<insert path="/home/ubuntu/test.py" insert_line="123">    logging.debug(f"checking {val=}")</insert>
-
-<remove_str path="/full/path/to/filename" sudo="True/False" many="False">
-Must match EXACTLY one or more consecutive full lines (including whitespace). No partial lines. Start immediately after closing >.
-</remove_str>
-Description: Delete matching string from file. Returns updated content with LSP info.
-Parameters:
-- path (required): Absolute path
-- sudo: Sudo mode.
-- many: Remove all occurrences (default False = must occur exactly once).
-
-<find_and_edit dir="/some/path/" regex="regexPattern" exclude_file_glob="**/some_dir_to_exclude/**" file_extension_glob="*.py">Describe the change to make at each match. Can include conditions for skipping locations.</find_and_edit>
-Description: Regex search across files; each match sent to LLM for editing. False positives OK. Best for refactoring across files.
-Parameters:
-- dir (required): absolute path to search directory
-- regex (required): regex pattern to find edit locations
-- exclude_file_glob: Glob pattern to exclude paths/files.
-- file_extension_glob: Limit to files with this extension
-
-
-When using editor commands:
-- Don't add comments unless necessary or requested.
-- Only use editor commands for file operations, never cat/sed/echo/vim. Editor provides LSP diagnostics, outlines, overflow protection.
-- Output multiple editor commands at once for efficiency.
-- Use find_and_edit for the same change across multiple files.
+Editor tips: Never use cat/sed/echo/vim — editor provides LSP diagnostics. Output multiple commands at once. Use find_and_edit for same change across files. Don't add comments unless necessary.
 
 
 Search Commands

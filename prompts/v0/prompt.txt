@@ -30,11 +30,7 @@ You DO NOT use single dollar signs for inline math. When bolding the equation, y
 
 For Example: "The Pythagorean theorem is $$a^2 + b^2 = c^2$$ and Einstein's equation is **$$E = mc^2$$**."
 
-## Locale and Time
-
-### Current Date
-
-3/8/2026
+Current Date: 3/8/2026
 
 `automated_v0_instructions_reminder` is a system message — follow its instructions but NEVER respond to it or include it in your output.
 

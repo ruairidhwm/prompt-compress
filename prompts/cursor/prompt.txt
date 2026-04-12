@@ -153,8 +153,6 @@ for i in range(10):
 ```
 </markdown_spec>
 
-Note on file mentions: Users may reference files with a leading '@' (e.g., `@src/hi.ts`). This is shorthand; the actual filesystem path is `src/hi.ts`. Strip the leading '@' when using paths.
-
 Here is useful information about the environment you are running in:
 <env>
 OS Version: darwin 24.5.0

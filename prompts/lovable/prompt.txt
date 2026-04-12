@@ -83,25 +83,6 @@ ALWAYS implement SEO best practices automatically for every page/component.
    - Conclude with a very concise summary of the changes you made.
    - Avoid emojis.
 
-## Efficient Tool Usage
-
-### CARDINAL RULES:
-1. NEVER read files already in "useful-context"
-2. ALWAYS batch multiple operations when possible
-3. NEVER make sequential tool calls that could be combined
-4. Use the most appropriate tool for each task
-
-### EFFICIENT FILE READING (BATCH WHEN POSSIBLE)
-
-IMPORTANT: Read multiple related files in sequence when they're all needed for the task.
-
-### EFFICIENT CODE MODIFICATION
-Choose the least invasive approach:
-- Use search-replace for most changes
-- Use write-file only for new files or complete rewrites
-- Use rename-file for renaming operations
-- Use delete-file for removing files
-
 ## Coding guidelines
 
 - ALWAYS generate beautiful and responsive designs.

@@ -1,0 +1,6 @@
+{"iteration":1,"tokens":1536,"avg_similarity":0.91,"min_similarity":0.7496,"passed":false,"kept":false,"strategy":"Compressed code_style from 30 lines to 7 lines, removing section headers and merging bullets — input 5 dropped to 0.75, highly load-bearing"}
+{"iteration":2,"tokens":1666,"avg_similarity":0.9254,"min_similarity":0.7846,"passed":false,"kept":false,"strategy":"Compressed maximize_parallel_tool_calls from 3 sentences to 2 — input 2 dropped to 0.785"}
+{"iteration":3,"tokens":1720,"avg_similarity":0.9279,"min_similarity":0.83,"passed":false,"kept":false,"strategy":"Removed 2 blank lines between sections — even whitespace changes fail, input 2 at 0.83"}
+{"iteration":4,"tokens":1598,"avg_similarity":0.9137,"min_similarity":0.789,"passed":false,"kept":false,"strategy":"Compressed tool_calling from 10 numbered items to single paragraph — input 5 at 0.789"}
+{"iteration":5,"tokens":1691,"avg_similarity":0.919,"min_similarity":0.7705,"passed":false,"kept":false,"strategy":"Compressed context_understanding from 3 sentences to 2 — input 2 at 0.77, 5 consecutive failures"}
+{"summary":true,"final_tokens":1721,"original_tokens":3511,"reduction_pct":51.0,"iterations":5}

@@ -1,0 +1,9 @@
+{"iteration":1,"tokens":1736,"avg_similarity":0.959,"min_similarity":0.8724,"passed":true,"kept":true,"strategy":"Compressed query_type section: converted 10 type-specific instruction blocks from multi-line format to single-line bold-key format"}
+{"iteration":2,"tokens":1272,"avg_similarity":0.9537,"min_similarity":0.8433,"passed":false,"kept":false,"strategy":"Compressed entire format_rules from 90 lines to 15 lines — input 5 at 0.843, close but format rules highly load-bearing"}
+{"iteration":3,"tokens":1641,"avg_similarity":0.9495,"min_similarity":0.8402,"passed":false,"kept":false,"strategy":"Compressed planning_rules from 11 lines to 3 — input 5 at 0.840"}
+{"iteration":4,"tokens":1598,"avg_similarity":0.9547,"min_similarity":0.8609,"passed":true,"kept":true,"strategy":"Compressed first half of format_rules: Answer Start, Headings, Lists, Tables from 32 lines to 4 compact paragraphs"}
+{"iteration":5,"tokens":1306,"avg_similarity":0.9499,"min_similarity":0.7914,"passed":false,"kept":false,"strategy":"Compressed second half of format_rules (Emphasis through Citations) — input 5 at 0.791, too aggressive"}
+{"iteration":6,"tokens":1542,"avg_similarity":0.9598,"min_similarity":0.8708,"passed":true,"kept":true,"strategy":"Compressed just Emphasis and Code Snippets sections from 8 lines to 2 lines"}
+{"iteration":7,"tokens":1472,"avg_similarity":0.9483,"min_similarity":0.8184,"passed":false,"kept":false,"strategy":"Compressed Math section from 7 lines to 1 — input 5 at 0.818"}
+{"iteration":8,"tokens":1532,"avg_similarity":0.9585,"min_similarity":0.864,"passed":true,"kept":true,"strategy":"Compressed Quotations from 2 lines to 1 line"}
+{"summary":true,"final_tokens":1532,"original_tokens":2394,"reduction_pct":36.0,"iterations":8}

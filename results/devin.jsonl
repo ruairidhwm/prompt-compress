@@ -1,0 +1,8 @@
+{"iteration":1,"tokens":4120,"avg_similarity":0.9473,"min_similarity":0.9214,"passed":true,"kept":true,"strategy":"Compressed Browser Commands: converted 9 separate command blocks with full descriptions to single bullet-per-command format, merged tips"}
+{"iteration":2,"tokens":3583,"avg_similarity":0.9505,"min_similarity":0.9217,"passed":true,"kept":true,"strategy":"Compressed Editor Commands: converted 7 command blocks with examples and parameter lists to compact bullet format, merged tips"}
+{"iteration":3,"tokens":3207,"avg_similarity":0.9401,"min_similarity":0.9049,"passed":true,"kept":true,"strategy":"Compressed Deployment, User Interaction, Misc, and Plan command sections: converted all to compact bullet format"}
+{"iteration":4,"tokens":3042,"avg_similarity":0.9396,"min_similarity":0.8823,"passed":true,"kept":true,"strategy":"Compressed Search Commands: converted 3 command blocks with parameter lists to compact bullet format, merged tips"}
+{"iteration":5,"tokens":2487,"avg_similarity":0.9292,"min_similarity":0.8654,"passed":true,"kept":true,"strategy":"Compressed Shell Commands: converted 4 command blocks with examples and parameter lists to compact bullet format, removed 3 shell usage tips lines"}
+{"iteration":6,"tokens":2333,"avg_similarity":0.9325,"min_similarity":0.8664,"passed":true,"kept":true,"strategy":"Compressed Reasoning Commands: merged think description, MUST use cases, and should-use cases into single dense paragraph"}
+{"iteration":7,"tokens":2117,"avg_similarity":0.921,"min_similarity":0.8676,"passed":true,"kept":true,"strategy":"Compressed Planning section: merged 5 bullets about planning/standard modes into single sentence"}
+{"summary":true,"final_tokens":2117,"original_tokens":8678,"reduction_pct":75.6,"iterations":7}

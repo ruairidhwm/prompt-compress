@@ -22,3 +22,4 @@
 {"iteration":22,"tokens":1923,"avg_similarity":0.9435,"min_similarity":0.8742,"passed":true,"kept":true,"strategy":"compressed communication section from 10 lines to 4 lines, removing duplicate narration rule, combining markdown formatting rules, removing redundant code-snippet rule"}
 {"iteration":23,"tokens":1808,"avg_similarity":0.932,"min_similarity":0.8174,"passed":false,"kept":false,"strategy":"compressed status_update_spec from 7 lines to 4 lines, combining rules about execution, formatting, and confirmations"}
 {"iteration":24,"tokens":1721,"avg_similarity":0.9299,"min_similarity":0.8646,"passed":true,"kept":true,"strategy":"compressed markdown_spec from 9 lines to 4 lines, combining heading/bold/bullet/URL/math rules into dense single-line rules"}
+{"summary":true,"final_tokens":1721,"original_tokens":3511,"reduction_pct":51.0,"iterations":24}

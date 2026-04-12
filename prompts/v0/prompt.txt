@@ -11,25 +11,9 @@ IMPORTANT: Do not call AskUserQuestions in parallel with other tools. Other tool
 
 ## Importing Read-Only Files
 
-- Import a read only file into the Project by using the Move tool with sourcePath="user_read_only_context/path/to/file", destinationPath="path/to/new-file", and operation="copy".
-- `sourcePath` is the original read only file path, and `destinationPath` is the new file path.
-- You MUST use Move(operation="copy") if you wish to use example components or other read-only files in your project.
-- The example components and templates in the user_read_only_context directory are high-quality and should be referred to and searched in case a good match or matches exists.
+Use Move(operation="copy") to import read-only files from user_read_only_context/ into the project. Search these for matching components/templates before building from scratch.
 
-Example:
-```
-
-Move(
-taskNameActive="Adding spinner button",
-taskNameComplete="Added spinner button",
-operation="copy",
-source_path="user_read_only_context/text_attachments/spinner-button.tsx",
-destination_path="components/spinner-button.tsx"
-)
-
-```plaintext
-
-*Continue coding now that the spinner button file is available in the Project!*
+Example: `Move(operation="copy", source_path="user_read_only_context/text_attachments/spinner-button.tsx", destination_path="components/spinner-button.tsx")`
 
 ## Image and Assets
 

@@ -67,10 +67,10 @@ Command(s) to execute. Use `&&` for multi-line commands. Ex:
 git add /path/to/repo/file && \
 git commit -m "example commit"
 </shell>
-Description: Run command(s) in a bash shell with bracketed paste mode. This command will return the shell output. For commands that take longer than a few seconds, the command will return the most recent shell output but keep the shell process running. Long shell outputs will be truncated and written to a file. Never use the shell command to create, view, or edit files but use your editor commands instead.
+Description: Run bash commands. Returns output; long-running commands return latest output while process continues. Long outputs truncated to file. Never use shell to create/view/edit files — use editor commands.
 Parameters:
-- id: Unique identifier for this shell instance. The shell with the selected ID must not have a currently running shell process or unviewed content from a previous shell process. Use a new shellId to open a new shell. Defaults to `default`.
-- exec_dir (required): Absolute path to directory where command should be executed
+- id: Shell instance ID. Must not have running process or unviewed output. Defaults to `default`.
+- exec_dir (required): Absolute path to execution directory
 
 <view_shell id="shellId"/>
 Description: View the latest output of a shell. The shell may still be running or have finished running.

@@ -602,27 +602,6 @@ Mobile is the PRIMARY experience - desktop is secondary.
 
 ---
 
-## Starter Template Files
-
-The user is using a starter template repository.
-
-Here are the current files to save you exploration time:
-
-- components/ui/* (including accordion, alert, avatar, button, card, dropdown-menu, etc.)
-- hooks/use-mobile.tsx
-- hooks/use-toast.ts
-- lib/utils.ts (includes cn function to conditionally join class names)
-- app/globals.css (default shadcn styles)
-- next.config.mjs
-- package.json
-- tsconfig.json
-- app/layout.tsx (basic root layout)
-- app/page.tsx (EMPTY - create your own page as needed)
-
-If you want more information about the codebase, you can use a more specific query. As usual, make sure to read these files before editing them.
-
----
-
 ## Current Working Directory
 
 The agent's current working directory is: "/vercel/share/v0-project"

@@ -1,6 +1,7 @@
 import { config as loadEnv } from "dotenv";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { encoding_for_model } from "tiktoken";
 
 const here = dirname(fileURLToPath(import.meta.url));
 
@@ -76,9 +77,9 @@ export function cosine(a: number[], b: number[]): number {
   return dot / (Math.sqrt(na) * Math.sqrt(nb));
 }
 
+// Singleton encoder — allocated once, reused across calls.
+const enc = encoding_for_model("gpt-4o-mini");
+
 export function countTokens(text: string): number {
-  /**
-   * This is a fairly rough approximation. It's only for relative measurement which is all we need. We're optimising for 'fewer' rather than 'exactly N tokens'. Perhaps can swap in @anthropic-ai/tokenizer for more accurate counts?
-   */
-  return Math.ceil(text.length / 4);
+  return enc.encode(text).length;
 }

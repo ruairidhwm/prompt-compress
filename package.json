@@ -24,6 +24,8 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "dotenv": "^17.4.1"
+    "@anthropic-ai/sdk": "^0.88.0",
+    "dotenv": "^17.4.1",
+    "tiktoken": "^1.0.22"
   }
 }

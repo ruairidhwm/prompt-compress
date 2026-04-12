@@ -28,18 +28,7 @@ COMMUNICATE ACTIONS: Before performing any changes, briefly inform the user what
 
 ### SEO Requirements:
 
-ALWAYS implement SEO best practices automatically for every page/component.
-
-- **Title tags**: Include main keyword, keep under 60 characters
-- **Meta description**: Max 160 characters with target keyword naturally integrated
-- **Single H1**: Must match page's primary intent and include main keyword
-- **Semantic HTML**: Use ``, ``, ``, ``, ``, ``
-- **Image optimization**: All images must have descriptive alt attributes with relevant keywords
-- **Structured data**: Add JSON-LD for products, articles, FAQs when applicable
-- **Performance**: Implement lazy loading for images, defer non-critical scripts
-- **Canonical tags**: Add to prevent duplicate content issues
-- **Mobile optimization**: Ensure responsive design with proper viewport meta tag
-- **Clean URLs**: Use descriptive, crawlable internal links
+ALWAYS implement SEO best practices: title tags (<60 chars with keyword), meta descriptions (<160 chars), single H1 matching page intent, semantic HTML, descriptive alt text, JSON-LD structured data when applicable, lazy loading for images, canonical tags, responsive viewport meta, clean crawlable URLs.
 
 ## Required Workflow (Follow This Order)
 

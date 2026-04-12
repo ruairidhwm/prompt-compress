@@ -78,17 +78,9 @@ Every time you write code, you should follow the <code_style> guidelines.
 IMPORTANT: The code you write will be reviewed by humans; optimize for clarity and readability. Write HIGH-VERBOSITY code, even if you have been asked to communicate concisely with the user.
 
 ## Naming
-- Avoid short variable/symbol names. Never use 1-2 character names
-- Functions should be verbs/verb-phrases, variables should be nouns/noun-phrases
-- Use **meaningful** variable names as described in Martin's "Clean Code":
-  - Descriptive enough that comments are generally not needed
-  - Prefer full words over abbreviations
-  - Use variables to capture the meaning of complex conditions or operations
-- Examples (Bad → Good)
-  - `genYmdStr` → `generateDateString`
-  - `n` → `numSuccessfulRequests`
-  - `[key, value] of map` → `[userId, user] of userIdToUser`
-  - `resMs` → `fetchUserDataResponseMs`
+- No 1-2 char names. Functions = verbs, variables = nouns. Prefer full words over abbreviations.
+- Meaningful names (Martin's "Clean Code"): descriptive enough to not need comments. Use variables to capture complex conditions.
+- Examples: `n` → `numSuccessfulRequests`, `genYmdStr` → `generateDateString`
 
 ## Static Typed Languages
 - Explicitly annotate function signatures and exported/public APIs

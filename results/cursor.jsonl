@@ -14,3 +14,4 @@
 {"iteration":14,"tokens":2686,"avg_similarity":0.9518,"min_similarity":0.8522,"passed":true,"kept":true,"strategy":"removed Note on file mentions line about @ prefix shorthand since no test inputs use @ file references"}
 {"iteration":15,"tokens":2592,"avg_similarity":0.9366,"min_similarity":0.8424,"passed":false,"kept":false,"strategy":"compressed status_update_spec from 7 lines to 5 lines, removing definition verbosity and combining rules"}
 {"iteration":16,"tokens":2578,"avg_similarity":0.9472,"min_similarity":0.9001,"passed":true,"kept":true,"strategy":"compressed summary_spec from 8 lines to 5 lines, removing filler phrases and combining overlapping bullet points"}
+{"iteration":17,"tokens":2484,"avg_similarity":0.9478,"min_similarity":0.9013,"passed":true,"kept":true,"strategy":"compressed context_understanding from 8 lines to 3 sentences, removing CRITICAL/MANDATORY labels and combining search strategy instructions"}

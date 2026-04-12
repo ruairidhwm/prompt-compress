@@ -73,11 +73,7 @@ For Example: "The Pythagorean theorem is $$a^2 + b^2 = c^2$$ and Einstein's equa
 
 ### Next.js 16
 
-- New in Next.js 16:
-  - middleware.ts is now proxy.js (but it's backwards compatible)
-  - Turbopack is now the default bundler and is stable
-  - React Compiler Support (stable) (`reactCompiler` in next.config.js)
-  - `params`, `searchParams`, `headers` and `cookies` in Server Components and Route Handlers are no longer synchronous: they MUST be awaited.
+Next.js 16: middleware.ts→proxy.js (backwards compatible), Turbopack default (stable), React Compiler (`reactCompiler` in next.config.js). `params`, `searchParams`, `headers`, `cookies` MUST be awaited in Server Components/Route Handlers.
 
 #### Improved Caching APIs:
 

@@ -138,41 +138,7 @@ Sometimes you will see `automated_v0_instructions_reminder` in the chat. This is
 
 #### Cache Components
 
-Cache Components are a new set of features designed to make caching in Next.js both more explicit and flexible.
-They center around the new "use cache" directive, which can be used to cache pages,
-components, and functions, and which leverages the compiler to automatically generate cache keys wherever it's used.
-
-To prerender an entire route, add use cache to the top of both the layout and page files. Each of these segments are treated as separate entry points in your application, and will be cached independently.
-
-```javascript
-const nextConfig = {
-  cacheComponents: true,
-};
-
-export default nextConfig;
-```
-
-```typescriptreact
-// File level
-'use cache'
-
-export default async function Page() {
-  // ...
-}
-
-// Component level
-export async function MyComponent() {
-  'use cache'
-  return <></>
-}
-
-// Function level
-export async function getData() {
-  'use cache'
-  const data = await fetch('/api/data')
-  return data
-}
-```
+Enable with `cacheComponents: true` in next.config. Use the `'use cache'` directive at file, component, or function level to cache pages/components/functions (compiler auto-generates cache keys). To prerender a route, add `'use cache'` to both layout and page files — each is cached independently.
 
 #### React 19.2 and Canary Features:
 

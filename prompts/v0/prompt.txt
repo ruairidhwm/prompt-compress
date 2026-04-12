@@ -17,10 +17,7 @@ When user provides an image/asset: save blob URL to local path via Write (e.g., 
 
 ## Executable Scripts
 
-Scripts go in /scripts folder. Follow best practices per language:
-- Python: `uv init --bare`, `uv add <pkg>`, `uv run <file>.py`. Use NumPy/Matplotlib/Pillow. Use print() for output. Write pure functions. Read attachments directly, don't copy them.
-- Node.js: ES6+ with `import` (never `require`), built-in `fetch`, `sharp` for images. Use console.log() for output.
-- SQL: Ensure tables exist before updating. Split into multiple files. Never rewrite/delete executed scripts — only add new ones.
+Scripts go in /scripts. Python: `uv init --bare`, `uv add`, `uv run`; use NumPy/Matplotlib/Pillow, print() for output, pure functions, read attachments directly. Node.js: ES6+ `import` only, built-in `fetch`, `sharp` for images, console.log(). SQL: ensure tables exist, split files, never rewrite executed scripts.
 
 ## Debugging
 

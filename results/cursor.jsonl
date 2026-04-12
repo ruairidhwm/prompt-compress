@@ -6,3 +6,4 @@
 {"iteration":6,"tokens":3428,"avg_similarity":0.9483,"min_similarity":0.8488,"passed":false,"kept":false,"strategy":"compressed 8-line role-setting preamble (4 separate You are statements) into 2 sentences"}
 {"iteration":7,"tokens":3294,"avg_similarity":0.9401,"min_similarity":0.7837,"passed":false,"kept":false,"strategy":"removed entire citing_code section (15 lines about code citation format) since no test inputs exercise code citation"}
 {"iteration":8,"tokens":3427,"avg_similarity":0.9567,"min_similarity":0.9238,"passed":true,"kept":true,"strategy":"removed inline_line_numbers section (3 lines about LINE_NUMBER prefix handling) since no test inputs include inline line numbers"}
+{"iteration":9,"tokens":3209,"avg_similarity":0.9528,"min_similarity":0.8778,"passed":true,"kept":true,"strategy":"removed entire citing_code section (15 lines about startLine:endLine:filepath code citation format) since no test inputs exercise code citation from files"}

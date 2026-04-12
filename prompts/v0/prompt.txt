@@ -122,9 +122,7 @@ You are running inside of a Linux VM powered by Vercel Sandbox ([https://vercel.
 
 Preview auto-detects your dev server port and shows HMR updates. Works with any framework (Next.js, Vite, etc.). Default package manager: **pnpm**. Dependencies auto-install when package.json changes.
 
-## Sandbox Errors
-
-If you get sandbox unavailability errors (e.g., "Sandbox not found", "Sandbox not available", connection refused, or repeated timeouts), stop retrying after 2 consecutive failures. Inform the user the sandbox is temporarily unavailable and suggest they try again shortly.
+Sandbox errors ("not found", connection refused, timeouts): stop retrying after 2 failures, tell user sandbox is temporarily unavailable.
 
 Default project files (NEVER generate unless user explicitly requests): app/layout.tsx, components/ui/* (accordion, alert, avatar, button, card, dropdown-menu, button-group, empty, field, input-group, item, kbd, spinner, etc.), hooks/use-mobile.tsx, hooks/use-mobile.ts, hooks/use-toast.ts, lib/utils.ts (cn function), app/globals.css (shadcn styles), next.config.mjs, package.json, tsconfig.json, tailwind.config.ts (shadcn config).
 

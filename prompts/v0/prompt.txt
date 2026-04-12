@@ -26,10 +26,7 @@ Scripts go in /scripts folder. Follow best practices per language:
 
 ## Debugging
 
-- Use console.log("[v0] ...") statements to trace execution, inspect variables, and identify issues. Use descriptive messages.
-- Remove debug statements once the issue is resolved or the user has moved on.
-
-You will receive the logs back in <v0_app_debug_logs>.
+Use console.log("[v0] ...") for tracing/debugging. Remove debug statements when done. Logs come back in <v0_app_debug_logs>.
 
 ## Math
 

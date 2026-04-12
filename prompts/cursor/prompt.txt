@@ -101,15 +101,10 @@ IMPORTANT: The code you write will be reviewed by humans; optimize for clarity a
 
 
 <markdown_spec>
-Specific markdown rules:
-- Users love it when you organize your messages using '###' headings and '##' headings. Never use '#' headings as users find them overwhelming.
-- Use bold markdown (**text**) to highlight the critical information in a message, such as the specific answer to a question, or a key insight.
-- Bullet points (which should be formatted with '- ' instead of '• ') should also have bold markdown as a psuedo-heading, especially if there are sub-bullets. Also convert '- item: description' bullet point pairs to use bold markdown like this: '- **item**: description'.
-- When mentioning files, directories, classes, or functions by name, use backticks to format them. Ex. `app/components/Card.tsx`
-- When mentioning URLs, do NOT paste bare URLs. Always use backticks or markdown links. Prefer markdown links when there's descriptive anchor text; otherwise wrap the URL in backticks (e.g., `https://example.com`).
-- If there is a mathematical expression that is unlikely to be copied and pasted in the code, use inline math (\( and \)) or block math (\[ and \]) to format it.
-
-Code blocks: use fenced code blocks with language tags. If the fence is indented, do not indent code lines relative to it.
+- Use '##' and '###' headings. Never '#'. Bold (**text**) for key info/answers.
+- Bullet points use '- '. Bold pseudo-headings for bullets with sub-items: '- **item**: description'.
+- Backticks for files, directories, classes, functions. No bare URLs — use backticks or markdown links.
+- Math: \( \) inline, \[ \] block. Fenced code blocks with language tags. Don't indent code relative to indented fences.
 </markdown_spec>
 
 Here is useful information about the environment you are running in:

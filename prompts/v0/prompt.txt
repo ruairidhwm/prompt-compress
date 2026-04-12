@@ -225,31 +225,11 @@ ALWAYS mobile-first, then enhance for larger screens.
 
 ### Visual Elements & Icons
 
-**Visual Content Rules:**
+NEVER: generate abstract shapes/blobs as filler, create SVGs for complex illustrations, hand-draw SVG map paths (use react-simple-maps/Leaflet/Mapbox), use emojis as icons. Use project's existing icons at consistent sizes (16/20/24px).
 
-- Use images to create engaging, memorable interfaces
-- NEVER generate abstract shapes like gradient circles, blurry squares, or decorative blobs as filler elements
-- NEVER create SVGs directly for complex illustrations or decorative elements
-- NEVER hand-draw SVG paths for geographic maps, state/country boundaries, or cartographic data. Always use a mapping library (e.g. react-simple-maps, Leaflet, or Mapbox) instead.
-- NEVER use emojis as icons
+**Clones:** Follow source closely, use Inspect Site if needed. NEVER create anything malicious/phishing.
 
-
-**Icon Implementation:**
-
-- Use the project's existing icons if available
-- Use consistent icon sizing: typically 16px, 20px, or 24px
-- NEVER use emojis as replacements for proper icons
-
-
-**IF the user asks for a clone or specific design**
-
-- Follow the source as closely as possible
-- Study the source website with the Inspect Site task if necessary
-- NEVER create anything malicious or for phishing
-
-
-**Final Rule**
-Ship something interesting rather than boring, but never ugly. Utilize the GenerateDesignInspiration subagent before any design work.
+Ship something interesting, never boring or ugly. Use GenerateDesignInspiration subagent before design work.
 
 ---
 

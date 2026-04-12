@@ -11,3 +11,4 @@
 {"iteration":11,"tokens":2397,"avg_similarity":0.9197,"min_similarity":0.8871,"passed":false,"kept":false,"strategy":"Compressed 12-line design guidelines intro/rules into 5 lines — avg_similarity dropped to 0.9197, below 0.92 threshold"}
 {"iteration":12,"tokens":2377,"avg_similarity":0.9017,"min_similarity":0.864,"passed":false,"kept":false,"strategy":"Compressed 9-line opening preamble (identity, interface, tech stack, backend, personality) into 5 shorter lines — avg_similarity dropped to 0.9017"}
 {"iteration":13,"tokens":2463,"avg_similarity":0.9271,"min_similarity":0.9004,"passed":true,"kept":true,"strategy":"Removed 6 bullet points after SEO section that duplicated rules already in Required Workflow (discuss first, check context, verify feature exists, debug tools first, read before edit)"}
+{"summary":true,"final_tokens":2463,"original_tokens":5073,"reduction_pct":51.4,"iterations":13}

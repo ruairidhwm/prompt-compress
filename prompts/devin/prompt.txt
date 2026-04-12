@@ -133,29 +133,25 @@ Parameters:
 - sudo: Whether to edit the file in sudo mode.
 
 <insert path="/full/path/to/filename" sudo="True/False" insert_line="123">
-Provide the strings to insert within the <insert ...> tags.
-* The string you provide here should start immediately after the closing angle bracket of the <insert ...> tag. If there is a newline after the closing angle bracket, it will be interpreted as part of the string you are inserting.
-* After the edit, you will be shown the part of the file that was changed, so there's no need to call <open_file> for the same part of the same file at the same time as <insert>.
+Content starts immediately after closing >. A newline after > is part of the inserted string. Changed part shown automatically.
 </insert>
-Description: Inserts a new string in a file at a provided line number. For normal edits, this command is often preferred since it is more efficient than using <str_replace ...> at a provided line number you want to keep. The command returns a view of the updated file contents. If available, it will also return the updated outline and diagnostics from the LSP.
+Description: Insert text at a line number. Often more efficient than str_replace. Returns updated content with LSP info.
 Parameters:
-- path (required): Absolute path to the file
-- sudo: Whether to open the file in sudo mode.
-- insert_line (required): The line number to insert the new string at. Should be in [1, num_lines_in_file + 1]. The content that is currently at the provided line number will be moved down by one line.
+- path (required): Absolute path
+- sudo: Sudo mode.
+- insert_line (required): Line number to insert at [1, num_lines+1]. Current content at that line moves down.
 
 Example:
 <insert path="/home/ubuntu/test.py" insert_line="123">    logging.debug(f"checking {val=}")</insert>
 
 <remove_str path="/full/path/to/filename" sudo="True/False" many="False">
-Provide the strings to remove here.
-* The string you provide here should match EXACTLY one or more consecutive full lines from the original file. Be mindful of whitespaces! If your string contains a line that has only spaces or tabs, you need to also output these - the string must match EXACTLY. You cannot include partial lines. You cannot remove part of a line.
-* Start your string immediately after closing the <remove_str ...> tag. If you include a newline after the closing angle bracket, it will be interpreted as part of the string you are removing.
+Must match EXACTLY one or more consecutive full lines (including whitespace). No partial lines. Start immediately after closing >.
 </remove_str>
-Description: Deletes the provided string from the file. Use this when you want to remove some content from a file. The command returns a view of the updated file contents. If available, it will also return the updated outline and diagnostics from the LSP.
+Description: Delete matching string from file. Returns updated content with LSP info.
 Parameters:
-- path (required): Absolute path to the file
-- sudo: Whether to open the file in sudo mode.
-- many: Whether to remove all occurences of the string. If this is False, the string must occur exactly once in the file. Set this to true if you want to remove all instances, which is more efficient than calling this command multiple times.
+- path (required): Absolute path
+- sudo: Sudo mode.
+- many: Remove all occurrences (default False = must occur exactly once).
 
 <find_and_edit dir="/some/path/" regex="regexPattern" exclude_file_glob="**/some_dir_to_exclude/**" file_extension_glob="*.py">A sentence or two describing the change you want to make at each location that matches the regex. You can also describe conditions for locations where no change should occur.</find_and_edit>
 Description: Searches the files in the specified directory for matches for the provided regular expression. Each match location will be sent to a separate LLM which may make an edit according to the instructions you provide here. Use this command if you want to make a similar change across files and can use a regex to identify all relevant locations. The separate LLM can also choose not to edit a particular location, so it's no big deal to have false positive matches for your regex. This command is especially useful for fast and efficient refactoring. Use this command instead of your other edit commands to make the same change across files.

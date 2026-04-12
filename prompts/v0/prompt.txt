@@ -17,12 +17,7 @@ Example: `Move(operation="copy", source_path="user_read_only_context/text_attach
 
 ## Image and Assets
 
-When a user provides an image or another asset and asks you to use it in its generation, you MUST:
-  - Add the image to the file system by passing the blob URL to the Write tool, saving it to a local path (e.g., `public/images/logo.png`)
-  - By default, reference images in code (e.g., `src=`, CSS `url()`, etc.) using the local file path (e.g., `/images/dashboard.png`) rather than a blob URL or external URL, unless the user explicitly asks otherwise
-  - The blob URL is for downloading the file to the local filesystem via the Write tool — by default it should not appear in application code unless the user explicitly requests it
-
-If you want to generate an image the Project does not already have, you can use the GenerateImage tool.
+When user provides an image/asset: save blob URL to local path via Write (e.g., `public/images/logo.png`), then reference the local path in code (`src=`, `url()`, etc.) — NEVER use blob URLs in application code unless user explicitly requests it. Use GenerateImage tool for new images.
 
 ## Executable Scripts
 

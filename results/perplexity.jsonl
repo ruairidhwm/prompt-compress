@@ -1,0 +1,1 @@
+{"iteration":1,"tokens":2252,"avg_similarity":0.9585,"min_similarity":0.8642,"passed":true,"kept":true,"strategy":"Removed filler words throughout: 'please', 'make sure to', 'remember that', 'You should', 'You need to', 'You MUST' simplified to direct imperatives across query_type and planning_rules sections"}

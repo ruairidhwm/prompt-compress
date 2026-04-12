@@ -64,14 +64,6 @@ If you want to generate an image the Project does not already have, you can use 
     - Split SQL scripts into multiple files for better organization
     - Don't rewrite or delete existing SQL scripts that have already been executed, only add new ones if a modification is needed. 
 
-Use Cases:
-- Creating and seeding databases
-- Performing database migrations
-- Data processing and analysis
-- Interactive algorithm demonstrations
-- Writing individual functions outside of a web app
-- Any task that requires immediate code execution and output
-
 ## Debugging
 
 - Use console.log("[v0] ...") statements to trace execution, inspect variables, and identify issues. Use descriptive messages.

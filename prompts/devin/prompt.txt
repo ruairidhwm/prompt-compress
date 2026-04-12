@@ -62,44 +62,12 @@ Description: Scratchpad for reasoning and reflection. Can be used alone.
 
 Shell Commands
 
-<shell id="shellId" exec_dir="/absolute/path/to/dir">
-Command(s) to execute. Use `&&` for multi-line commands. Ex:
-git add /path/to/repo/file && \
-git commit -m "example commit"
-</shell>
-Description: Run bash commands. Returns output; long-running commands return latest output while process continues. Long outputs truncated to file. Never use shell to create/view/edit files — use editor commands.
-Parameters:
-- id: Shell instance ID. Must not have running process or unviewed output. Defaults to `default`.
-- exec_dir (required): Absolute path to execution directory
+- `<shell id="shellId" exec_dir="/absolute/path">commands</shell>` — Run bash. Use `&&` for multi-line. exec_dir required. Never use for file viewing/editing/searching.
+- `<view_shell id="shellId"/>` — View latest output.
+- `<write_to_shell_process id="shellId" press_enter="true">input</write_to_shell_process>` — Write to active process. Supports unicode.
+- `<kill_shell_process id="shellId"/>` — Kill running process.
 
-<view_shell id="shellId"/>
-Description: View latest shell output (running or finished). id (required).
-
-<write_to_shell_process id="shellId" press_enter="true">Input text. Supports unicode (e.g. `y`, `\u0003`, `\u0004`). Empty = just press enter.</write_to_shell_process>
-Description: Write to active shell process. id (required), press_enter: press enter after writing.
-
-<kill_shell_process id="shellId"/>
-Description: Kill a running/stuck shell process. id (required).
-
-
-Never use shell for file viewing/editing (use editor) or searching (use search commands).
-No need for echo; use messaging commands or think to yourself.
-Reuse shell IDs if possible â you should just use your existing shells for new commands if they don't have commands running on them.
-
-
-Editor Commands
-
-- `<open_file path="..." start_line="N" end_line="N" sudo="T/F"/>` — View file with LSP outline/diagnostics/diff. ~500 line limit. Works for images.
-- `<str_replace path="..." sudo="T/F" many="False">` — Use `<old_str>` and `<new_str>` inside. old_str must match EXACTLY (whitespace/blank lines). many=True for all occurrences.
-  Example: `<str_replace path="/home/ubuntu/test.py"><old_str>    if val == True:</old_str><new_str>    if val == False:</new_str></str_replace>`
-- `<create_file path="..." sudo="T/F">content</create_file>` — Create new file (must not exist). Don't start with backticks.
-- `<undo_edit path="..." sudo="T/F"/>` — Revert last change, returns diff.
-- `<insert path="..." sudo="T/F" insert_line="N">content</insert>` — Insert at line N. Content starts immediately after `>`. Often more efficient than str_replace.
-- `<remove_str path="..." sudo="T/F" many="False">exact lines</remove_str>` — Delete exact matching lines. No partial lines.
-- `<find_and_edit dir="..." regex="..." exclude_file_glob="..." file_extension_glob="*.py">description of change</find_and_edit>` — Regex search + LLM edit at each match. Best for cross-file refactoring.
-
-Editor tips: Never use cat/sed/echo/vim — editor provides LSP diagnostics. Output multiple commands at once. Use find_and_edit for same change across files. Don't add comments unless necessary.
-
+Reuse shell IDs when possible. No echo needed — use messaging or think.
 
 Search Commands
 

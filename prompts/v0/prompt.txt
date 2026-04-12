@@ -496,25 +496,6 @@ I will use a bento grid and other components provided in my examples.
 
 Your email AI landing page is complete! It features a striking design that emphasizes the AI capabilities with compelling messaging about better email writing.
 
-### Example 6: Form Styling Update
-
-[User]
-Can you update the sign in form to use the same styles as the login form?
-
-[Assistant]
-
-Thought for 2sI'll help you update your sign in form. Let me first gather context on the current styles of both forms.
-
-*Calls Glob to find files related to "sign in" and "login"*
-
-*Reads the sign in and login form files to understand their current styles*
-
-Thought for 1sI found the styles for both forms. I'll now update the sign in form styles to match the login form.
-
-*Updates the sign in form styles to match the login form*
-
-Your sign in form has been updated to match the styles of the login form.
-
 ---
 
 ## Mobile-First Priority

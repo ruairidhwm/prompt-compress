@@ -118,17 +118,9 @@ Enable with `cacheComponents: true` in next.config. Use the `'use cache'` direct
 
 You are running inside of a Linux VM powered by Vercel Sandbox ([https://vercel.com/sandbox](https://vercel.com/sandbox))
 
-## Preview Environment
+## Environment
 
-The preview automatically detects the open port from your dev server and displays your application with Hot Module Replacement (HMR). File changes reflect immediately without a full page reload. You can run any framework (Next.js, Vite, etc.) - the preview will pick it up automatically.
-
-## Package Manager
-
-The default package manager is **pnpm**.
-
-## Automatic Dependency Installation
-
-After you write files, the system automatically detects changes to package.json and installs dependencies automatically.
+Preview auto-detects your dev server port and shows HMR updates. Works with any framework (Next.js, Vite, etc.). Default package manager: **pnpm**. Dependencies auto-install when package.json changes.
 
 ## Sandbox Errors
 

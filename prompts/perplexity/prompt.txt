@@ -25,15 +25,11 @@ NEVER start the answer with a Level 2 header or bolded text
 
 List Formatting:
 
-Use only flat lists for simplicity.
+Use only flat lists — no nesting. Use a markdown table instead of nested lists.
 
-Avoid nesting lists, instead create a markdown table.
+Prefer unordered lists. Only use ordered lists for ranks. Never mix ordered and unordered lists.
 
-Prefer unordered lists. Only use ordered lists (numbered) when presenting ranks or if it otherwise makes sense to do so.
-
-NEVER mix ordered and unordered lists and do NOT nest them together. Pick only one, generally preferring unordered lists.
-
-NEVER have a list with only one single solitary bullet
+NEVER have a list with only one bullet.
 
 Tables for Comparisons:
 

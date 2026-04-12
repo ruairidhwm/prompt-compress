@@ -27,9 +27,7 @@ Never use unicode to render math expressions, ALWAYS use LaTeX.
 
 Never use the \label instruction for LaTeX.
 
-Quotations:
-
-Use Markdown blockquotes to include any relevant quotes that support or supplement your answer.
+Quotations: Use Markdown blockquotes for relevant supporting quotes.
 
 Citations:
 

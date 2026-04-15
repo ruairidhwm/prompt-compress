@@ -21,13 +21,54 @@ export const EMBED_MODEL = "text-embedding-3-small";
 export const PRICE_PER_1K_INPUT = 0.00015;
 export const PRICE_PER_1K_OUTPUT = 0.0006;
 
+// Fixed seed for (best-effort) reproducibility. OpenAI does not guarantee
+// bit-exact determinism even with temperature 0 + seed, but it meaningfully
+// reduces run-to-run drift and declares the run as "seeded" in the response.
+export const SEED = 42;
+
 const BASE = "https://api.openai.com/v1";
+
+// Retry on transient 429/5xx failures with exponential backoff.
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  maxAttempts = 4,
+): Promise<Response> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const res = await fetch(url, init);
+      if (res.ok) return res;
+      if (res.status >= 500 || res.status === 429) {
+        const body = await res.text();
+        lastError = new Error(`OpenAI ${res.status}: ${body}`);
+        if (attempt < maxAttempts) {
+          const delayMs = 500 * 2 ** (attempt - 1);
+          await new Promise((r) => setTimeout(r, delayMs));
+          continue;
+        }
+      }
+      // Non-retryable error (4xx other than 429)
+      throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
+    } catch (e) {
+      lastError = e;
+      if (attempt < maxAttempts) {
+        const delayMs = 500 * 2 ** (attempt - 1);
+        await new Promise((r) => setTimeout(r, delayMs));
+        continue;
+      }
+    }
+  }
+  throw lastError instanceof Error
+    ? lastError
+    : new Error(`OpenAI request failed after ${maxAttempts} attempts`);
+}
 
 export async function callModel(
   systemPrompt: string,
   userInput: string,
 ): Promise<{ text: string; inputTokens: number; outputTokens: number }> {
-  const res = await fetch(`${BASE}/chat/completions`, {
+  const res = await fetchWithRetry(`${BASE}/chat/completions`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -36,13 +77,13 @@ export async function callModel(
     body: JSON.stringify({
       model: MODEL,
       temperature: 0,
+      seed: SEED,
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userInput },
       ],
     }),
   });
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
   const data = await res.json();
   return {
     text: data.choices[0].message.content ?? "",
@@ -52,7 +93,7 @@ export async function callModel(
 }
 
 export async function embed(texts: string[]): Promise<number[][]> {
-  const res = await fetch(`${BASE}/embeddings`, {
+  const res = await fetchWithRetry(`${BASE}/embeddings`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -60,7 +101,6 @@ export async function embed(texts: string[]): Promise<number[][]> {
     },
     body: JSON.stringify({ model: EMBED_MODEL, input: texts }),
   });
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
   const data = await res.json();
   return data.data.map((d: any) => d.embedding as number[]);
 }

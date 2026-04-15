@@ -26,10 +26,10 @@ function fail(msg: string): never {
 async function main() {
   const candidatePath = process.argv[2];
   const dir = process.argv[3];
-  const originalCommit = process.argv[4] || "f4767a7"; // commit with original prompts
+  const originalRef = process.argv[4] || "original-prompts"; // git tag/ref with original prompts
 
   if (!candidatePath || !dir) {
-    fail("Usage: npx tsx src/score-extended.ts <candidate> <dir> [original-commit]");
+    fail("Usage: npx tsx src/score-extended.ts <candidate> <dir> [original-ref]");
   }
 
   const extInputsPath = join(dir, "inputs-extended.jsonl");
@@ -63,11 +63,11 @@ async function main() {
     let originalPrompt: string;
     try {
       originalPrompt = execSync(
-        `git show ${originalCommit}:prompts/${promptName}/prompt.txt`,
+        `git show ${originalRef}:prompts/${promptName}/prompt.txt`,
         { encoding: "utf-8" }
       );
     } catch {
-      fail(`Cannot get original prompt from git at ${originalCommit}`);
+      fail(`Cannot get original prompt from git at ${originalRef}`);
     }
 
     console.error(`Generating baselines for ${inputs.length} extended inputs...`);

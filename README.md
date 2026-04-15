@@ -9,15 +9,21 @@ An autoresearch loop for compressing production LLM system prompts while preserv
 - `results/` — result logs per prompt. `50_cap/` is the first pass (targeting ~50% reduction); top-level `*.jsonl` files are the deeper run (down to ~25% floor). `validation/` contains per-prompt noise-floor measurements. `analysis/` contains the extended-corpus results and qualitative diffs.
 - `CLAUDE.md` — loop specification used to drive the compression: stopping conditions, strategies, and hard constraints.
 
+The compression edits themselves were proposed by an LLM agent (Claude) reading `CLAUDE.md` as its operating instructions and iterating the loop below — the human role was designing the evaluation, constraints, and stopping conditions, not hand-editing each prompt.
+
 ## How the loop works
 
 For each prompt, hill-climb on token count with a semantic-similarity quality gate:
 
 1. Propose one edit to `prompt.txt`, save as `candidate.txt`.
-2. `npx tsx src/score.ts prompts/{name}/candidate.txt prompts/{name}` runs the candidate against 8 fixed inputs on `gpt-4o-mini` (temperature 0) and compares each output to the frozen baseline via cosine similarity on `text-embedding-3-small` embeddings.
+2. `npx tsx src/score.ts prompts/{name}/candidate.txt prompts/{name}` runs the candidate against 8 fixed inputs on `gpt-4o-mini` (temperature 0, seed 42) and compares each output to the frozen baseline via cosine similarity on `text-embedding-3-small` embeddings.
 3. Pass condition: avg similarity ≥ 0.92, min ≥ 0.85. Keep and commit on pass; revert on fail. Log either way.
 
 Stop after 25 iterations, 5 consecutive failures, or once the prompt drops below 25% of its original token count.
+
+The original (pre-compression) prompts are preserved at the `original-prompts` git tag. `noise-floor.ts`, `score-extended.ts`, `score-claude.ts`, and `qualitative-compare.ts` fetch from that tag, so the scripts remain reproducible after the compression loop has overwritten `prompt.txt`.
+
+OpenAI chat completions use `temperature: 0, seed: 42`. That is best-effort determinism — OpenAI does not guarantee bit-exact reproduction — so repeated runs of `noise-floor.ts` and the extended/Claude scorers will drift at the margin. The per-prompt compression trajectories in `results/*.jsonl` are the original un-seeded run (scored against the frozen `baseline.jsonl`, so still fully reproducible as comparisons). The files in `results/validation/` were re-generated under the current seeded script and drift slightly from the values quoted in the accompanying blog post; the direction and magnitude of the findings is unchanged.
 
 ## The headline result
 

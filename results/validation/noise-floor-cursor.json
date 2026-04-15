@@ -1,19 +1,35 @@
-◇ injected env (1) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (2) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+Noise floor: prompts/cursor (prompt @ original-prompts)
+  Prompt: ~3009 tokens
+  Inputs: 8
+  Running each input twice, independently...
+
+  [1/8] A... B... done
+  [2/8] A... B... done
+  [3/8] A... B... done
+  [4/8] A... B... done
+  [5/8] A... B... done
+  [6/8] A... B... done
+  [7/8] A... B... done
+  [8/8] A... B... done
+
+Computing embeddings...
 {
   "directory": "prompts/cursor",
-  "prompt_tokens": 3511,
+  "original_ref": "original-prompts",
+  "prompt_tokens": 3009,
   "n_inputs": 8,
-  "avg_self_similarity": 0.9605,
-  "min_self_similarity": 0.8433,
-  "max_self_similarity": 1,
+  "avg_self_similarity": 0.9255,
+  "min_self_similarity": 0.7989,
+  "max_self_similarity": 0.9997,
   "per_input_self_similarity": [
-    0.9625,
-    0.9279,
-    0.9872,
-    1,
-    0.8433,
-    0.9945,
-    0.9715,
-    0.9972
+    0.8337,
+    0.8899,
+    0.9703,
+    0.9457,
+    0.7989,
+    0.9997,
+    0.9799,
+    0.9859
   ]
 }

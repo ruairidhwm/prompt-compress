@@ -1,19 +1,35 @@
-◇ injected env (1) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+◇ injected env (2) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+Noise floor: prompts/devin (prompt @ original-prompts)
+  Prompt: ~7341 tokens
+  Inputs: 8
+  Running each input twice, independently...
+
+  [1/8] A... B... done
+  [2/8] A... B... done
+  [3/8] A... B... done
+  [4/8] A... B... done
+  [5/8] A... B... done
+  [6/8] A... B... done
+  [7/8] A... B... done
+  [8/8] A... B... done
+
+Computing embeddings...
 {
   "directory": "prompts/devin",
-  "prompt_tokens": 8678,
+  "original_ref": "original-prompts",
+  "prompt_tokens": 7341,
   "n_inputs": 8,
-  "avg_self_similarity": 0.9643,
-  "min_self_similarity": 0.9122,
-  "max_self_similarity": 0.9968,
+  "avg_self_similarity": 0.9692,
+  "min_self_similarity": 0.9109,
+  "max_self_similarity": 0.9995,
   "per_input_self_similarity": [
-    0.9774,
-    0.9911,
-    0.9252,
-    0.9122,
-    0.9968,
-    0.9556,
-    0.976,
-    0.9803
+    0.9613,
+    0.967,
+    0.9109,
+    0.9991,
+    0.9599,
+    0.9966,
+    0.9995,
+    0.9591
   ]
 }

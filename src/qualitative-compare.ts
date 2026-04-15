@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { callModel, countTokens } from "./openai.js";
 
 /**
@@ -8,15 +8,15 @@ import { callModel, countTokens } from "./openai.js";
  * document for manual inspection.
  *
  * Usage:
- *   npx tsx src/qualitative-compare.ts <prompt-directory> [original-commit]
+ *   npx tsx src/qualitative-compare.ts <prompt-directory> [original-ref]
  */
 
 async function main() {
   const dir = process.argv[2];
-  const originalCommit = process.argv[3] || "f4767a7";
+  const originalRef = process.argv[3] || "original-prompts";
 
   if (!dir) {
-    console.error("Usage: npx tsx src/qualitative-compare.ts <prompt-directory> [original-commit]");
+    console.error("Usage: npx tsx src/qualitative-compare.ts <prompt-directory> [original-ref]");
     process.exit(1);
   }
 
@@ -25,7 +25,7 @@ async function main() {
 
   const { execSync } = await import("child_process");
   const originalPrompt = execSync(
-    `git show ${originalCommit}:prompts/${promptName}/prompt.txt`,
+    `git show ${originalRef}:prompts/${promptName}/prompt.txt`,
     { encoding: "utf-8" }
   );
 
@@ -61,6 +61,7 @@ async function main() {
   }
 
   const outPath = `results/analysis/qualitative-${promptName}.md`;
+  mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, md);
   console.error(`Wrote ${outPath}`);
   console.log(outPath);

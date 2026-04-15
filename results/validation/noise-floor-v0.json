@@ -1,19 +1,35 @@
-◇ injected env (1) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (2) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+Noise floor: prompts/v0 (prompt @ original-prompts)
+  Prompt: ~8015 tokens
+  Inputs: 8
+  Running each input twice, independently...
+
+  [1/8] A... B... done
+  [2/8] A... B... done
+  [3/8] A... B... done
+  [4/8] A... B... done
+  [5/8] A... B... done
+  [6/8] A... B... done
+  [7/8] A... B... done
+  [8/8] A... B... done
+
+Computing embeddings...
 {
   "directory": "prompts/v0",
-  "prompt_tokens": 9068,
+  "original_ref": "original-prompts",
+  "prompt_tokens": 8015,
   "n_inputs": 8,
-  "avg_self_similarity": 0.9656,
-  "min_self_similarity": 0.9174,
-  "max_self_similarity": 0.9999,
+  "avg_self_similarity": 0.9752,
+  "min_self_similarity": 0.9261,
+  "max_self_similarity": 0.9989,
   "per_input_self_similarity": [
-    0.9701,
-    0.9982,
-    0.9573,
-    0.9753,
-    0.9999,
-    0.9422,
-    0.9174,
-    0.9642
+    0.9874,
+    0.9742,
+    0.9867,
+    0.9954,
+    0.9827,
+    0.9501,
+    0.9261,
+    0.9989
   ]
 }

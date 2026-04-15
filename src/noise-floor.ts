@@ -1,56 +1,64 @@
 import { readFileSync, existsSync } from "node:fs";
+import { execSync } from "node:child_process";
 import { join } from "node:path";
 import { callModel, embed, cosine, countTokens } from "./openai.js";
 
 /**
  * Noise floor measurement.
  *
- * Runs the ORIGINAL prompt against the inputs TWICE (two independent samples),
- * then measures cosine similarity between the two runs per input.
+ * Runs the ORIGINAL (pre-compression) prompt against the inputs TWICE (two
+ * independent samples), then measures cosine similarity between the two runs
+ * per input.
  *
  * This gives the ceiling of what any compression could achieve under the
  * scoring function — no compressed version can score higher than the original
  * prompt scores against itself.
  *
+ * The original prompt is always fetched from the `original-prompts` git tag
+ * (NOT the current prompt.txt, which may have been overwritten by the
+ * compression loop). This means the script is reproducible at any point in
+ * the repo's lifecycle.
+ *
  * Does NOT use baseline.jsonl. Both samples are fresh calls, independent of
  * the frozen baseline.
  *
  * Usage:
- *   npx tsx src/noise-floor.ts prompts/v0
+ *   npx tsx src/noise-floor.ts prompts/v0 [original-ref]
  */
 
 async function main() {
   const dir = process.argv[2];
+  const originalRef = process.argv[3] || "original-prompts";
   if (!dir) {
-    console.error("Usage: npx tsx src/noise-floor.ts <prompt-directory>");
+    console.error("Usage: npx tsx src/noise-floor.ts <prompt-directory> [original-ref]");
     process.exit(1);
   }
 
-  const promptPath = join(dir, "prompt.txt");
   const inputsPath = join(dir, "inputs.jsonl");
 
-  if (!existsSync(promptPath)) {
-    console.error(`Missing ${promptPath}`);
-    process.exit(1);
-  }
   if (!existsSync(inputsPath)) {
     console.error(`Missing ${inputsPath}`);
     process.exit(1);
   }
 
-  // IMPORTANT: this reads the CURRENT prompt.txt, which after the run has
-  // been overwritten with the compressed version. For a true noise-floor
-  // measurement, you want the ORIGINAL prompt. Restore it from git first:
-  //   git show <pre-experiment-commit>:prompts/<name>/prompt.txt > /tmp/<name>-original.txt
-  // Or run this script BEFORE starting the compression run.
-  const prompt = readFileSync(promptPath, "utf-8");
+  const promptName = dir.split("/").pop();
+  let prompt: string;
+  try {
+    prompt = execSync(`git show ${originalRef}:prompts/${promptName}/prompt.txt`, {
+      encoding: "utf-8",
+    });
+  } catch {
+    console.error(`Cannot get original prompt from git at ${originalRef}`);
+    process.exit(1);
+  }
+
   const inputs: string[] = readFileSync(inputsPath, "utf-8")
     .split("\n")
     .map((l) => l.trim())
     .filter(Boolean)
     .map((l) => (JSON.parse(l) as { input: string }).input);
 
-  console.error(`Noise floor: ${dir}`);
+  console.error(`Noise floor: ${dir} (prompt @ ${originalRef})`);
   console.error(`  Prompt: ~${countTokens(prompt)} tokens`);
   console.error(`  Inputs: ${inputs.length}`);
   console.error(`  Running each input twice, independently...`);
@@ -84,6 +92,7 @@ async function main() {
 
   const result = {
     directory: dir,
+    original_ref: originalRef,
     prompt_tokens: countTokens(prompt),
     n_inputs: inputs.length,
     avg_self_similarity: Number(avgSimilarity.toFixed(4)),

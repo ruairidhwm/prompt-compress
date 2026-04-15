@@ -1,19 +1,27 @@
 {
   "name": "prompt-compress",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Autoresearch loop for compressing production LLM system prompts while preserving output behaviour, with an honest evaluation of the limits.",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "score": "tsx src/score.ts",
+    "score:extended": "tsx src/score-extended.ts",
+    "baseline": "tsx src/baseline.ts",
+    "noise-floor": "tsx src/noise-floor.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruairidhwm/prompt-compress.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "llm",
+    "prompt-engineering",
+    "prompt-compression",
+    "evaluation",
+    "system-prompts"
+  ],
+  "author": "Ruairidh Wynne-McCorry",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ruairidhwm/prompt-compress/issues"
   },

@@ -1,3 +1,6 @@
 node_modules
 .env
 *.log
+.claude
+prompts/*/candidate.txt
+blog-post.md
